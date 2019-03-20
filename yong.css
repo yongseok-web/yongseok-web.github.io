@@ -1,11 +1,11 @@
 <style>
-
-<style>
   * {
     margin: 0;
     padding: 0;
   }
-
+  section div{
+    height: 1024px;
+  }
   #top {
     height: 150px;
     background-color: red;
