@@ -7,7 +7,9 @@
     height: 1024px;
   }
   footer{
-
+  }
+  .img{
+    display: inline-block;
   }
   .min500{
 
