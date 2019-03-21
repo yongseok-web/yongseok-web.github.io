@@ -8,7 +8,11 @@
   }
   footer{
   }
-  .img ul{
+  nav ul li{
+    display: inline-block;
+
+  }
+  .img li{
     display: inline-block;
   }
   .min500{
