@@ -1,85 +1,80 @@
-<!DOCTYPE html>
-<!-- saved from url=(0031)https://yongseok-web.github.io/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #s1{
+      position: absolute;
+      top:0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(115deg,#f9c5f1,#88d5f9);
+      width: 99vw;
+      height: 100vh;
+  }
+  section div{
+    height: 100vh;
+  }
+  h1{
+    margin: 60px;
+  }
+  .bo{
+    /* display: inline-block; */
 
-  <meta name="viewport" section="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" section="ie=edge">
-  <title>Yongseok's P</title>
-  <link rel="stylesheet" type="text/css" href="./Yongseok&#39;s P_files/yong.css">
-<link type="text/css" rel="stylesheet" href="chrome-extension://eobejphpabbjeehffmbiecckpkggpbai/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://eobejphpabbjeehffmbiecckpkggpbai/js/content-script/page_context.js"></script></head>
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 60%;
+    height: 616px;
+    }
+    .bo ul li{
+      display: inline-block;
+    }
+  footer{
+  }
+  nav{
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    opacity: .90;
+    display: inline-block;
 
-<body naver_screen_capture_injected="true">
-<div id="s1">
-  <nav>
-    <img src="logo.png" alt="">
-    <ul>
-      <li><a href="https://yongseok-web.github.io/#1">소개</a></li>
-      <li><a href="https://yongseok-web.github.io/#2">프로젝트</a></li>
-      <li><a href="https://yongseok-web.github.io/#3">홈페이지 구축&amp;리뉴얼</a></li>
-      <li><a href="https://yongseok-web.github.io/#4">웹페이지 분석</a></li>
-      <li><a href="https://yongseok-web.github.io/#5">그래픽 작업</a></li>
-    </ul>
-  </nav>
-  <header>
-    <h1>포트폴리오 구성하기</h1>
-  </header>
-  <div class="bo">
-    <h2>학습</h2>
-    <ul>
-      <li><a href="https://yongseok-web.github.io/web_study/html5.list.html"><img src="./Yongseok&#39;s P_files/html.png" alt="HTML5"></a></li>
-      <li><a href="https://yongseok-web.github.io/web_study/css3/list.html"><img src="./Yongseok&#39;s P_files/css.png" alt="CSS3"></a></li>
-      <li><a href="https://yongseok-web.github.io/web_study/js/list.html"><img src="./Yongseok&#39;s P_files/js.png" alt="JavaScript"></a></li>
-      <li><a href="https://yongseok-web.github.io/web_study/PHP/hanbit7th/list.html"><img src="./Yongseok&#39;s P_files/php.png" alt="PHP"></a></li>
-      <li><a href="https://yongseok-web.github.io/design_study/Adobe%20Photoshop.html"><img src="./Yongseok&#39;s P_files/ps.png" alt="Adobe Photoshop"></a></li>
-      <li><a href="https://yongseok-web.github.io/design_study/Adobe%20Illustrator.html"><img src="./Yongseok&#39;s P_files/Ai.png" alt="Adobe Illustrator"></a></li>
-    </ul>
-      <h2>함께 공부하기</h2>
-    <ul>GitHub
-      <li><a href="https://yongseok-web.github.io/Presentation/GitHub/index.html">GitHub 이해하기</a></li>
-      <br>PHP
-      <li><a href="https://yongseok-web.github.io/Presentation/PHP/PHP_1_basic/index.html">PHP 기본문법</a></li>
+  }
+  nav ul{
+    position: relative;
+    top:-20px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    display: inline-block;
 
-    </ul>
-  </div>
-</div>
+  }
+    nav ul li{
+      color: #ffffff;
+      display: inline-block;
+    }
 
-  <div id="main">
-  </div>
+  .img li{
+    display: inline-block;
+  }
+  .min500{
 
-  <section id="1">
-    <div>
-      <h1>소개</h1>
-      <div class="img">
-      </div>
-    </div>
-  </section>
-  <section id="2">
-    <div>
-      <h1>프로젝트</h1>
-    </div>
-  </section>
-  <section id="3">
-    <div>
-      <h1>홈페이지 구축&amp;리뉴얼</h1>
-    </div>
-  </section>
-  <section id="4">
-    <div>
-      <h1>웹페이지 분석</h1>
-    </div>
-  </section>
-  <section id="5">
-    <div>
-      <h1>그래픽 작업</h1>
-    </div>
-  </section>
+  }
+  .max800{
 
+  }
+  .max500{
 
+  }
 
-  <footer>
-    copyright
-  </footer>
+  @media screen and (max-width:400px){
+  }
+  @media screen and (min-width:400px){
+  }
+  @media screen and (min-width:600px){
+  }
 
 
-
-</body><audio src="" id="naver_dic_audio_controller" controls="controls" style="display: none;"></audio></html>
+</style>
