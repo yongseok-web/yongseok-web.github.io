@@ -7,7 +7,7 @@
   <title>Yongseok's P</title>
   <link rel="stylesheet" type="text/css" href="yong.css">
   <script type="text/javascript" charset="utf-8" src="chrome-extension://eobejphpabbjeehffmbiecckpkggpbai/js/content-script/page_context.js"></script></head>
-
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tufzy6apo4"></script>
 <body naver_screen_capture_injected="true">
 <div id="main">
   <img src="logo.png" alt="">
@@ -15,6 +15,7 @@
 
 <div id="s1">
   <nav>
+     안녕하세요
     <ul>
       <li><a href="https://yongseok-web.github.io/#1">소개</a></li>
       <li><a href="https://yongseok-web.github.io/#2">프로젝트</a></li>
@@ -78,7 +79,16 @@
     </div>
   </section>
 
+  <div id="map" style="width:100%;height:400px;"></div>
 
+  <script>
+  var mapOptions = {
+      center: new naver.maps.LatLng(37.3595704, 127.105399),
+      zoom: 10
+  };
+
+  var map = new naver.maps.Map('map', mapOptions);
+  </script>
 
   <footer>
     copyright
