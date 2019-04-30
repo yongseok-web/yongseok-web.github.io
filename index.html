@@ -1,99 +1,424 @@
 <!DOCTYPE html>
-<!-- saved from url=(0031)https://yongseok-web.github.io/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="ko">
 
-  <meta name="viewport" section="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" section="ie=edge">
-  <title>Yongseok's P</title>
-  <link rel="stylesheet" type="text/css" href="yong.css">
-  <script type="text/javascript" charset="utf-8" src="chrome-extension://eobejphpabbjeehffmbiecckpkggpbai/js/content-script/page_context.js"></script></head>
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tufzy6apo4"></script>
-<body naver_screen_capture_injected="true">
-<div id="main">
-  <img src="logo.png" alt="">
-</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="YONGSEOK PORTFOLIO, 최용석, 포트폴리오" />
+  <meta name="Keywords" content="YONGSEOK PORTFOLIO, 최용석, 포트폴리오, 웹퍼블리셔" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge; chrome=1">
+  <meta http-equiv="Subject" content="YONGSEOK PORTFOLIO" />
+  <meta http-equiv="Title" content="YONGSEOK PORTFOLIO" />
+  <meta http-equiv="Author" content="YONG SEOK" />
+  <meta http-equiv="Email" content="yongseok.web@gmail.com" />
+  <meta http-equiv="Copyright" content="yongseok-web.github.io/" />
 
-<div id="s1">
-  <nav>
-     안녕하세요
-    <ul>
-      <li><a href="https://yongseok-web.github.io/#1">소개</a></li>
-      <li><a href="https://yongseok-web.github.io/#2">프로젝트</a></li>
-      <li><a href="https://yongseok-web.github.io/#3">홈페이지 구축&amp;리뉴얼</a></li>
-      <li><a href="https://yongseok-web.github.io/#4">웹페이지 분석</a></li>
-      <li><a href="https://yongseok-web.github.io/#5">그래픽 작업</a></li>
-    </ul>
-  </nav>
-  <header>
-    <h1>포트폴리오 구성하기</h1>
-  </header>
-  <div class="bo">
-    <h2>학습</h2>
-    <ul>
+  <title>YONGSEOK PORTFOLIO</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="css/reset.css">
+
+  <style media="screen">
+  #wrap{}
+  .inner{width: 990px;margin: 0 auto;padding-top: 50px;}
+  header, main, article{
+    height: 100vh;
+    position: relative;
+  }
+
+  nav{position: fixed;width: 100%;height: 50px;z-index: 100;}
+  nav ul{width: 800px;height: 100%;margin: 0 auto;background-color: rgb(64, 142, 246);text-align: center;font-size: 0;overflow: hidden;}
+  nav ul li{display: inline-block;font-size: 25px;width: 20%;padding: 12px 0;cursor: pointer;}
+  nav ul li:hover{background-color: white;}
+  nav ul li h2{display: none;}
+  .sub_menu{width: 30px;height: 200px;position: fixed;top: 50%;right: 5%;z-index: 90;}
+  .sub_menu span{display: inline-block;width: 20px;height: 20px;background-color: rgb(168, 87, 241);border-radius: 50%;cursor: pointer;  }
+  .sub_menu span:hover{background-color: #ff6c6c;}
+/* nav end */
+
+header{
+  background-color: #0071b9;
+}
+#header .inner_header{
+  text-align: center;
+}
+header img{width: 500px;}
+/* header end */
+
+main{
+  background-color: #3791c9;
+}
+#main .inner_main{
+
+}
+  /* main end */
+
+#portfolio{}
+#portfolio>h2{display: none;}
+
+  section #worked{
+    background-color: #009db9;
+  }
+  #worked .inner_worked{}
+    /* worked end */
+
+  section #study{
+    background-color: #3791c9;
+
+  }
+  #study .inner_study{}
+    /* study end */
+
+  section #contact{
+    background-color: #65e0f1;
+
+  }
+  #contact .inner_contact{}
+    /* contact end */
+
+footer{border-top: 1px solid #888;}
+footer .inner_footer{overflow: hidden;position: relative;padding: 37px 0 78px;}
+  /* footer end */
+
+  </style>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <nav>
+      <ul>
+        <li class="bt"><a href="#header">HOME</a></li>
+        <li class="bt"><a href="#main">ABOUT</a></li>
+        <li class="bt"><a href="#portfolio">PORTFOLIO</a></li>
+        <li class="bt"><a href="#study">STUDY</a></li>
+        <li class="bt"><a href="#contact">CONTACT</a></li>
+        <li>
+          <h2>목차</h2>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sub_menu">
+      <a href="#header"><span class="sub_bt"></span></a>
+      <a href="#main"><span class="sub_bt"></span></a>
+      <a href="#portfolio"><span class="sub_bt"></span></a>
+      <a href="#study"><span class="sub_bt"></span></a>
+      <a href="#contact"><span class="sub_bt"></span></a>
+    </div>
+
+    <header id="header">
+      <div class="inner_header inner">
+        <h1>yongseok's portfolio</h1>
+        <ul>
+          <li>프론트 앤드 개발자</li>
+          <li>web</li>
+          <li>
+            <img src="image/logo.png" alt="로고">
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main id='main'>
+      <div class="inner_main inner">
+        <h2>yongseok</h2>
+        <h3>about</h3>
+        <figure>
+          <img src="https://avatars3.githubusercontent.com/u/48015371?s=460&v=4" alt="">
+        </figure>
+        <ul>
+          <h3>skills</h3>
           <li><a href="web_study/html5.list.html"><img src="web_study/html.png" alt="HTML5"></a></li>
           <li><a href="web_study/css3/list.html"><img src="web_study/css.png" alt="CSS3"></a></li>
           <li><a href="web_study/js/list.html"><img src="web_study/js.png" alt="JavaScript"></a></li>
           <li><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/php.png" alt="PHP"></a></li>
           <li><a href="design_study/Adobe Photoshop.html"><img src="design_study/ps.png" alt="Adobe Photoshop"></a></li>
           <li><a href="design_study/Adobe Illustrator.html"><img src="design_study/Ai.png" alt="Adobe Illustrator"></a></li>
-    </ul>
-      <h2>함께 공부하기</h2>
-    <ul>GitHub
-      <li><a href="https://yongseok-web.github.io/Presentation/GitHub/index.html">GitHub 이해하기</a></li>
-      <br>PHP 프로그래밍
-      <li><a href="https://yongseok-web.github.io/Presentation/PHP/PHP_programming/index.html">PHP 프로그래밍 기초</a></li>
-      <li><a href="https://yongseok-web.github.io/Presentation/PHP/PHP_mysql/index.html">MySQL 데이터베이스</a></li>
+        </ul>
 
-    </ul>
-  </div>
-</div>
-
-  <div id="main">
-  </div>
-
-  <section id="1">.
-    <div>
-      <h1>소개</h1>
-      <div class="img">
       </div>
-    </div>
-  </section>
-  <section id="2">.
-    <div>
-      <h1>프로젝트</h1>
-    </div>
-  </section>
-  <section id="3">.
-    <div>
-      <h1>홈페이지 구축&amp;리뉴얼</h1>
-    </div>
-  </section>
-  <section id="4">.
-    <div>
-      <h1>웹페이지 분석</h1>
-    </div>
-  </section>
-  <section id="5">.
-    <div>
-      <h1>그래픽 작업</h1>
-    </div>
+    </main>
+
+    <section id="portfolio">
+      <h2>portfolio</h2>
+      <div class="inner_section">
+
+        <article id="worked">
+          <div class="inner_worked inner">
+
+            <h2>worked</h2>
+            <ul>
+              <li>
+                <h3>
+
+                  팀프로젝트(원 리얼)
+                </h3>
+                <figure>
+                  <figcaption>
+
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <h3>
+
+                  포트폴리오용(카카오 카피)
+                </h3>
+                <figure>
+                  <figcaption>
+
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <h3>
+
+                  포트폴리오용(리뉴얼)
+                </h3>
+                <figure>
+                  <figcaption>
+
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <h3>
+
+                  포토샵 작업물
+                </h3>
+                <figure>
+                  <figcaption>
+
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+        </article>
+      </div>
+
+      <article id="study">
+        <div class="inner_study inner">
+
+          <h2>학습 역량
+
+          </h2>
+          <ul>
+            <li>
+              <h3>
+                HTML + CSS
+
+              </h3>
+              <ul>
+                <li>교재</li>
+                <li>실습</li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                js, jquery
+
+
+              </h3>
+              <ul>
+                <li>교재</li>
+                <li>실습</li>
+                <li></li>
+                <li>게임</li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                PHP 프로그래밍
+
+              </h3>
+              <ul>
+                <li><a href="https://yongseok-web.github.io/Presentation/PHP/PHP_programming/index.html">PHP 프로그래밍 기초</a></li>
+                <li><a href="https://yongseok-web.github.io/Presentation/PHP/PHP_mysql/index.html">MySQL 데이터베이스</a></li>
+                <li>각 게시판 별 프로그램 알고리즘 위주</li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                디자인
+
+              </h3>
+              <ul>
+                <li>UX/UI</li>
+                <li>컬러스터디</li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                기타
+
+              </h3>
+              <ul>
+                <li><a href="https://yongseok-web.github.io/Presentation/GitHub/index.html">GitHub 이해하기</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </article>
+      <article id="contact">
+        <div class="inner_contact inner">
+          <h2>연락</h2>
+          <dl>
+            <dt>
+              <h3>메일</h3>
+            </dt>
+            <dd>yongseok.web@gmail.com</dd>
+            <dt>
+              <h3>KAKAO</h3>
+            </dt>
+            <dd>open</dd>
+          </dl>
+          <img src="" alt="QR코드">
+        </div>
+      </article>
+  </div>
   </section>
 
-  <div id="map" style="width:100%;height:400px;"></div>
-
-  <script>
-  var mapOptions = {
-      center: new naver.maps.LatLng(37.3595704, 127.105399),
-      zoom: 10
-  };
-
-  var map = new naver.maps.Map('map', mapOptions);
-  </script>
 
   <footer>
-    copyright
+    <div class="inner_footer inner">
+      COPYRIGHT © 2019 yongseok.web ALL RIGHTS RESERVED.
+    </div>
   </footer>
 
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var bt = document.getElementsByClassName('bt');
+      var sub_bt = document.getElementsByClassName('sub_bt');
+      var position;
 
+      $(bt[0]).click(function() {
+        count = 0;
+        wheel_count();
+      });
+      $(bt[1]).click(function() {
+        count = 1;
+        wheel_count();
+      });
+      $(bt[2]).click(function() {
+        count = 2;
+        wheel_count();
+      });
+      $(bt[3]).click(function() {
+        count = 3;
+        wheel_count();
+      });
+      $(bt[4]).click(function() {
+        count = 4;
+        wheel_count();
+      });
 
-</body><audio src="" id="naver_dic_audio_controller" controls="controls" style="display: none;"></audio></html>
+      $(sub_bt[0]).click(function() {
+        count = 0;
+        wheel_count();
+      });
+      $(sub_bt[1]).click(function() {
+        count = 1;
+        wheel_count();
+      });
+      $(sub_bt[2]).click(function() {
+        count = 2;
+        wheel_count();
+      });
+      $(sub_bt[3]).click(function() {
+        count = 3;
+        wheel_count();
+      });
+      $(sub_bt[4]).click(function() {
+        count = 4;
+        wheel_count();
+      });
+
+      var div_h = 0;
+      var count = 0;
+      var scrollEvent = false;
+      var wheel_data;
+
+      $("html").on('mousewheel', function(c) {
+        wheel_data = c.originalEvent.wheelDelta;
+        // console.log(wheel_data);
+        wheel_data = c.originalEvent.wheelDelta;
+        if (wheel_data > 0 && count > 0 && scrollEvent == false) {
+          c.preventDefault();
+          scrollEvent = true;
+          count--;
+          wheel_count();
+          setTimeout(function() {
+            scrollEvent = false;
+          }, 500);
+        } else if (wheel_data < 0 && count < 4 && scrollEvent == false) {
+          c.preventDefault();
+          scrollEvent = true;
+          count++;
+          wheel_count();
+          setTimeout(function() {
+            scrollEvent = false;
+          }, 500);
+        }
+      });
+
+      $(sub_bt[0]).css("background-color", "#ff6c6c");
+      position = $("main").offset();
+      $("html").animate({
+        scrollTop: position.top
+      }, 1);
+      position = $("header").offset();
+      $("html").animate({
+        scrollTop: position.top
+      }, 500);
+
+      function wheel_count() {
+        $(sub_bt[0]).css("background-color", "#fff");
+        $(sub_bt[1]).css("background-color", "#fff");
+        $(sub_bt[2]).css("background-color", "#fff");
+        $(sub_bt[3]).css("background-color", "#fff");
+        $(sub_bt[4]).css("background-color", "#fff");
+        if (count == 0) {
+          position = $("header").offset();
+          $("html").stop().animate({
+            scrollTop: position.top
+          }, 500);
+          $(sub_bt[0]).css("background-color", "#ff6c6c");
+        } else if (count == 1) {
+          position = $("main").offset();
+          $("html").stop().animate({
+            scrollTop: position.top
+          }, 500);
+          $(sub_bt[1]).css("background-color", "#ff6c6c");
+
+        } else if (count == 2) {
+          position = $("#worked").offset();
+          $("html").stop().animate({
+            scrollTop: position.top
+          }, 500);
+          $(sub_bt[2]).css("background-color", "#ff6c6c");
+
+        } else if (count == 3) {
+          position = $("#study").offset();
+          $("html").stop().animate({
+            scrollTop: position.top
+          }, 500);
+          $(sub_bt[3]).css("background-color", "#ff6c6c");
+
+        } else if (count == 4) {
+          position = $("#contact").offset();
+          $("html").stop().animate({
+            scrollTop: position.top
+          }, 500);
+          $(sub_bt[4]).css("background-color", "#ff6c6c");
+
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
