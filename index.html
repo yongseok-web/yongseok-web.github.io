@@ -15,20 +15,26 @@
 
   <title>YONGSEOK PORTFOLIO</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="css/reset.css">
 
   <style media="screen">
-  #wrap{}
-  .inner{width: 990px;margin: 0 auto;padding-top: 50px;}
+  #wrap{background: url(image/bg.png);}
+  .inner{width: 990px;margin: 0 auto;padding-top: 60px;}
+  .inner_box{
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);}
   header, main, article{
-    height: 100vh;
     position: relative;
   }
 
   nav{position: fixed;width: 100%;height: 50px;z-index: 100;}
-  nav ul{width: 800px;height: 100%;margin: 0 auto;background-color: rgb(64, 142, 246);text-align: center;font-size: 0;overflow: hidden;}
+  nav ul{width: 990px;height: 100%;margin: 0 auto;background-color: rgb(64, 142, 246);text-align: center;font-size: 0;overflow: hidden;}
   nav ul li{display: inline-block;font-size: 25px;width: 20%;padding: 12px 0;cursor: pointer;}
   nav ul li:hover{background-color: white;}
   nav ul li h2{display: none;}
@@ -38,47 +44,86 @@
 /* nav end */
 
 header{
-  background-color: #0071b9;
+  /* background-color: #0071b9; */
+  height: 100vh;
+
 }
 #header .inner_header{
   text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+h1{
+
+  font-weight: bold;
+   text-align: center;
+   font-size: 60pt;
 }
 header img{width: 500px;}
 /* header end */
 
+h2{
+ font-weight: bold;
+  text-align: center;
+  font-size: 30pt;
+}
+.inner_bar{
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  width: 70px;
+height: 4px;
+background: #444649;
+}
+
 main{
-  background-color: #3791c9;
+  background-color: rgba(#3791c9);
+  height: 100vh;
+
+
 }
 #main .inner_main{
-
+background-color: #fff;
 }
   /* main end */
 
 #portfolio{}
 #portfolio>h2{display: none;}
 
-  section #worked{
+  section #project{
+    height: 100vh;
     background-color: #009db9;
   }
-  #worked .inner_worked{}
-    /* worked end */
+  #project .inner_project{
+    background-color: #fff;
+
+  }
+    /* project end */
 
   section #study{
+    height: 100vh;
     background-color: #3791c9;
 
   }
-  #study .inner_study{}
+  #study .inner_study{
+    background-color: #fff;
+
+  }
     /* study end */
 
   section #contact{
+    height: 80vh;
     background-color: #65e0f1;
 
   }
-  #contact .inner_contact{}
+  #contact .inner_contact{
+    background-color: #fff;
+
+  }
     /* contact end */
 
 footer{border-top: 1px solid #888;}
-footer .inner_footer{overflow: hidden;position: relative;padding: 37px 0 78px;}
+footer .inner_footer{overflow: hidden;position: relative;padding: 6vh 0 12vh;}
   /* footer end */
 
   </style>
@@ -101,11 +146,11 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 37px 0 78px;}
     </nav>
 
     <div class="sub_menu">
-      <a href="#header"><span class="sub_bt"></span></a>
-      <a href="#main"><span class="sub_bt"></span></a>
-      <a href="#portfolio"><span class="sub_bt"></span></a>
-      <a href="#study"><span class="sub_bt"></span></a>
-      <a href="#contact"><span class="sub_bt"></span></a>
+    <span class="sub_bt"></span>
+      <span class="sub_bt"></span>
+      <span class="sub_bt"></span>
+      <span class="sub_bt"></span>
+      <span class="sub_bt"></span>
     </div>
 
     <header id="header">
@@ -113,20 +158,19 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 37px 0 78px;}
         <h1>yongseok's portfolio</h1>
         <ul>
           <li>프론트 앤드 개발자</li>
-          <li>web</li>
           <li>
-            <img src="image/logo.png" alt="로고">
+            <!-- <img src="image/logo.png" alt="로고"> -->
           </li>
         </ul>
       </div>
     </header>
 
     <main id='main'>
-      <div class="inner_main inner">
-        <h2>yongseok</h2>
-        <h3>about</h3>
+      <div class="inner_main inner inner_box">
+        <h2>ABOUT</h2>
+        <div class="inner_bar"></div>
         <figure>
-          <img src="https://avatars3.githubusercontent.com/u/48015371?s=460&v=4" alt="">
+          <!-- <img src="https://avatars3.githubusercontent.com/u/48015371?s=460&v=4" alt=""> -->
         </figure>
         <ul>
           <h3>skills</h3>
@@ -145,10 +189,11 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 37px 0 78px;}
       <h2>portfolio</h2>
       <div class="inner_section">
 
-        <article id="worked">
-          <div class="inner_worked inner">
+        <article id="project">
+          <div class="inner_project inner inner_box">
 
-            <h2>worked</h2>
+            <h2>PROJECTS</h2>
+            <div class="inner_bar"></div>
             <ul>
               <li>
                 <h3>
@@ -199,9 +244,10 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 37px 0 78px;}
       </div>
 
       <article id="study">
-        <div class="inner_study inner">
+        <div class="inner_study inner inner_box">
 
           <h2>학습 역량
+            <div class="inner_bar"></div>
 
           </h2>
           <ul>
@@ -263,18 +309,13 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 37px 0 78px;}
 
       </article>
       <article id="contact">
-        <div class="inner_contact inner">
+        <div class="inner_contact inner inner_box">
           <h2>연락</h2>
-          <dl>
-            <dt>
-              <h3>메일</h3>
-            </dt>
-            <dd>yongseok.web@gmail.com</dd>
-            <dt>
-              <h3>KAKAO</h3>
-            </dt>
-            <dd>open</dd>
-          </dl>
+          <div class="inner_bar"></div>
+          <div class="container">
+          <p><a aria-label="Email yongseok" href="mailto:yongseok.web@gmail.com" data-position="top" data-tooltip="Email yongseok" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-envelope"></i></a><a alt="" href="yongseok.web@gmail.com" class="hoverline">yongseok.web@gmail.com</a></p>
+          <p><a aria-label="View yongseok on GitHub" href="http://github.com/yongseok-web" target="_blank" data-position="top" data-tooltip="View yongseok on GitHub" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a><a alt="" href="http://github.com/yongseok-web" class="hoverline">github.com/yongseok-web</a></p>
+          <p><a aria-label="View yongseok on KAKAO" href="https://open.kakao.com/o/sYksMHnb" target="_blank" data-position="top" data-tooltip="View yongseok on KAKAO" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-KAKAO"></i></a><a alt="" href="https://open.kakao.com/o/sYksMHnb" class="hoverline">open.kakao.com/o/sYksMHnb</a></p>
           <img src="" alt="QR코드">
         </div>
       </article>
@@ -367,13 +408,10 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 37px 0 78px;}
 
       $(sub_bt[0]).css("background-color", "#ff6c6c");
       position = $("main").offset();
-      $("html").animate({
-        scrollTop: position.top
-      }, 1);
+      $("html").animate({scrollTop: position.top}, 1);
       position = $("header").offset();
-      $("html").animate({
-        scrollTop: position.top
-      }, 500);
+      $("html").animate({scrollTop: position.top}, 500);
+      $("nav").css("opacity","0");
 
       function wheel_count() {
         $(sub_bt[0]).css("background-color", "#fff");
@@ -381,41 +419,40 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 37px 0 78px;}
         $(sub_bt[2]).css("background-color", "#fff");
         $(sub_bt[3]).css("background-color", "#fff");
         $(sub_bt[4]).css("background-color", "#fff");
+        $(bt[1]).css("background-color", "#0396b6");
+        $(bt[2]).css("background-color", "#0396b6");
+        $(bt[3]).css("background-color", "#0396b6");
+        $(bt[4]).css("background-color", "#0396b6");
+        $(bt[0]).css("background-color", "#0396b6");
+        $("nav").css("opacity","1");
+
         if (count == 0) {
           position = $("header").offset();
-          $("html").stop().animate({
-            scrollTop: position.top
-          }, 500);
           $(sub_bt[0]).css("background-color", "#ff6c6c");
+          $(bt[0]).css("background-color", "#fff");
+          $("nav").css("opacity","0")
+
         } else if (count == 1) {
           position = $("main").offset();
-          $("html").stop().animate({
-            scrollTop: position.top
-          }, 500);
           $(sub_bt[1]).css("background-color", "#ff6c6c");
-
+          $(bt[1]).css("background-color", "#fff");
         } else if (count == 2) {
-          position = $("#worked").offset();
-          $("html").stop().animate({
-            scrollTop: position.top
-          }, 500);
+          position = $("#project").offset();
           $(sub_bt[2]).css("background-color", "#ff6c6c");
+          $(bt[2]).css("background-color", "#fff");
 
         } else if (count == 3) {
           position = $("#study").offset();
-          $("html").stop().animate({
-            scrollTop: position.top
-          }, 500);
           $(sub_bt[3]).css("background-color", "#ff6c6c");
+          $(bt[3]).css("background-color", "#fff");
 
         } else if (count == 4) {
           position = $("#contact").offset();
-          $("html").stop().animate({
-            scrollTop: position.top
-          }, 500);
           $(sub_bt[4]).css("background-color", "#ff6c6c");
-
+          $(bt[4]).css("background-color", "#fff");
         }
+        $("html").stop().animate({scrollTop: position.top}, 500);
+
       }
     });
   </script>
