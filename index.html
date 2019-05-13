@@ -26,7 +26,7 @@
   #wrap{background: url(image/bg.png);}
   .inner{width: 990px;margin: 0 auto;padding-top: 5%;}
   .inner_box{
-    height: 80vh;position: relative;top: 5vh;
+    height: 80vh;position: relative;top: 5vh;margin-bottom: 5vh;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);}
@@ -105,6 +105,9 @@ text-align: center;
   #project .inner_project{
     background-color: #fff;
   }
+  #project li{margin: 0 0.35%;text-align: center;width: 24%;display: inline-block;background-color: #ccc;}
+  #project ul{width: 100%;}
+  #project figure img{width: 100%;}
     /* project end */
 
   section #study{
@@ -113,6 +116,14 @@ text-align: center;
   #study .inner_study{
     background-color: #fff;
   }
+  #study ul{margin-left: 5%;}
+  #study ul>li{margin-top: 1%;}
+  #study li ul li{display: inline-block;width: 33%;}
+
+  #study h3{
+    font-weight: bold;
+  }
+  #study figure img{width: 100%;}
     /* study end */
 
   section #contact{
@@ -185,6 +196,7 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
           <li><a href="web_study/css3/list.html"><img src="web_study/css.png" alt="CSS3"></a></li>
           <li><a href="web_study/js/list.html"><img src="web_study/js.png" alt="JavaScript"></a></li>
           <li><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/php.png" alt="PHP"></a></li>
+          <li><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/mysql.png" alt="PHP"></a></li>
           <li><a href="design_study/Adobe Photoshop.html"><img src="design_study/ps.png" alt="Adobe Photoshop"></a></li>
           <li><a href="design_study/Adobe Illustrator.html"><img src="design_study/Ai.png" alt="Adobe Illustrator"></a></li>
         </ul>
@@ -204,41 +216,48 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
             <ul>
               <li>
                 <h3>
-
-                  팀프로젝트(원 리얼)
+                  원공인중개사 홈페이지 제작
+                  팀프로젝트
                 </h3>
                 <figure>
+                  <img src="image/pro1.png" alt="">
                   <figcaption>
-
+                    2019.04.05~2019.04.09<br>
+                    html, CSS, javascript, php, MySQL 활용한 팀프로젝트 작업
                   </figcaption>
                 </figure>
               </li>
               <li>
                 <h3>
-
-                  포트폴리오용(카카오 카피)
+                  카카오 홈페이지
+                  카피페이지
                 </h3>
                 <figure>
+                  <img src="image/pro2.png" alt="">
                   <figcaption>
-
+                    2019.04.12<br>
+                    카카오페이지 copypage
                   </figcaption>
                 </figure>
               </li>
               <li>
                 <h3>
-
-                  포트폴리오용(리뉴얼)
+                  코딩테스트
+                  2시간
                 </h3>
                 <figure>
+                  <img src="image/pro3.png" alt="">
                   <figcaption>
-
+                    2019.05.02<br>
+                    경기산업기술교육센터 웹콘텐츠디자인 과정 하드코딩 테스트
                   </figcaption>
                 </figure>
               </li>
               <li>
                 <h3>
-
                   포토샵 작업물
+                  2019.03.02~
+                  디자인 시간 및 외부 홍보 포스터
                 </h3>
                 <figure>
                   <figcaption>
@@ -253,9 +272,8 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
       <article id="study">
         <div class="inner_study inner inner_box">
 
-          <h2>학습 역량
+          <h2>STUDY
             <div class="inner_bar"></div>
-
           </h2>
           <ul>
             <li>
@@ -264,8 +282,12 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
 
               </h3>
               <ul>
-                <li>교재</li>
-                <li>실습</li>
+                <li>교재<figure><img src="" alt="">                  <figcaption>
+
+                                  </figcaption></figure></li>
+                <li>실습<figure><img src="" alt="">                  <figcaption>
+
+                                  </figcaption></figure></li>
               </ul>
             </li>
             <li>
@@ -275,10 +297,15 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
 
               </h3>
               <ul>
-                <li>교재</li>
-                <li>실습</li>
-                <li></li>
-                <li>게임</li>
+                <li>교재<figure><img src="" alt="">                  <figcaption>
+
+                                  </figcaption></figure></li>
+                <li>실습<figure><img src="" alt="">                  <figcaption>
+
+                                  </figcaption></figure></li>
+                <li>게임<figure><img src="" alt="">                  <figcaption>
+
+                                  </figcaption></figure></li>
               </ul>
             </li>
             <li>
@@ -287,9 +314,14 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
 
               </h3>
               <ul>
-                <li><a href="https://yongseok-web.github.io/Presentation/PHP/PHP_programming/index.html">PHP 프로그래밍 기초</a></li>
-                <li><a href="https://yongseok-web.github.io/Presentation/PHP/PHP_mysql/index.html">MySQL 데이터베이스</a></li>
-                <li>각 게시판 별 프로그램 알고리즘 위주</li>
+                <li><a href="Presentation/PHP/PHP_programming/index.html">PHP 프로그래밍 기초<figure><img src="Presentation/PHP/PHP_programming/1.PNG" alt="">                  <figcaption>
+2019.04.02. 작성
+                                  </figcaption></figure></a></li>
+                <li><a href="Presentation/PHP/PHP_mysql/index.html">MySQL 데이터베이스<figure><img src="Presentation/PHP/PHP_mysql/1.PNG" alt="">                  <figcaption>
+2019.04.13. 작성                                  </figcaption></figure></a></li>
+                <li>게시판 기능별 프로그램 알고리즘<figure><img src="" alt="">                  <figcaption>
+
+                                  </figcaption></figure></li>
               </ul>
             </li>
             <li>
@@ -298,8 +330,15 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
 
               </h3>
               <ul>
-                <li>UX/UI</li>
-                <li>컬러스터디</li>
+                <li>UX/UI<figure><img src="" alt="">                  <figcaption>
+
+                                  </figcaption></figure></li>
+                <li>컬러스터디<figure><img src="" alt="">                  <figcaption>
+
+                                  </figcaption></figure></li>
+                <li>WEB스터디<figure><img src="" alt="">                  <figcaption>
+
+                                  </figcaption></figure></li>
               </ul>
             </li>
             <li>
@@ -308,7 +347,7 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
 
               </h3>
               <ul>
-                <li><a href="https://yongseok-web.github.io/Presentation/GitHub/index.html">GitHub 이해하기</a></li>
+                <li><a href="Presentation/GitHub/index.html">GitHub 이해하기</a><figure><img src="Presentation/GitHub/index.html/1.PNG" alt=""><figcaption>2019.03.28. 작성</figcaption></figure></li>
               </ul>
             </li>
           </ul>
@@ -317,7 +356,7 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
       </article>
       <article id="contact">
         <div class="inner_contact inner inner_box">
-          <h2>연락</h2>
+          <h2>CONTACT</h2>
           <div class="inner_bar"></div>
           <div class="container">
             <img src="image/frame.png" alt="QR코드">
