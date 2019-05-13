@@ -24,8 +24,9 @@
 
   <style media="screen">
   #wrap{background: url(image/bg.png);}
-  .inner{width: 990px;margin: 0 auto;padding-top: 60px;}
+  .inner{width: 990px;margin: 0 auto;padding-top: 5%;}
   .inner_box{
+    height: 80vh;position: relative;top: 5vh;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);}
@@ -33,13 +34,13 @@
     position: relative;
   }
 
-  nav{position: fixed;width: 100%;height: 50px;z-index: 100;}
+  nav{display: none;position: fixed;width: 100%;height: 50px;z-index: 100;top: 5vh;}
   nav ul{width: 990px;height: 100%;margin: 0 auto;background-color: rgb(64, 142, 246);text-align: center;font-size: 0;overflow: hidden;}
-  nav ul li{display: inline-block;font-size: 25px;width: 20%;padding: 12px 0;cursor: pointer;}
+  nav ul li{display: inline-block;font-size: 25px;width: 20%;padding: 12px 0;cursor: pointer;border-radius: 15px}
   nav ul li:hover{background-color: white;}
   nav ul li h2{display: none;}
-  .sub_menu{width: 30px;height: 200px;position: fixed;top: 50%;right: 5%;z-index: 90;}
-  .sub_menu span{display: inline-block;width: 20px;height: 20px;background-color: rgb(168, 87, 241);border-radius: 50%;cursor: pointer;  }
+  .sub_menu{width: 30px;height: 200px;position: fixed;top: 50%;left: 50%;transform: translate(525px,-50%);z-index: 90;}
+  .sub_menu span{display: inline-block;width: 20px;height: 20px;background-color: #FFF;border-radius: 50%;cursor: pointer;  }
   .sub_menu span:hover{background-color: #ff6c6c;}
 /* nav end */
 
@@ -63,67 +64,73 @@ header img{width: 500px;}
 /* header end */
 
 h2{
+  margin-top: 2%;
  font-weight: bold;
   text-align: center;
   font-size: 30pt;
 }
 .inner_bar{
   margin: auto;
-  margin-top: 25px;
-  margin-bottom: 100px;
-  width: 70px;
+  margin-top: 1%;
+  margin-bottom: 6%;
+  width: 10%;
 height: 4px;
 background: #444649;
 }
+#header .inner_header{
+  background-color: #fff;
 
+}
 main{
-  background-color: rgba(#3791c9);
   height: 100vh;
 
 
 }
 #main .inner_main{
 background-color: #fff;
+text-align: center;
+}
+#main li{
+  display: inline-block;
 }
   /* main end */
 
-#portfolio{}
+#portfolio{
+}
 #portfolio>h2{display: none;}
 
   section #project{
     height: 100vh;
-    background-color: #009db9;
   }
   #project .inner_project{
     background-color: #fff;
-
   }
     /* project end */
 
   section #study{
     height: 100vh;
-    background-color: #3791c9;
-
   }
   #study .inner_study{
     background-color: #fff;
-
   }
     /* study end */
 
   section #contact{
-    height: 80vh;
-    background-color: #65e0f1;
-
+    height: 100vh;
   }
   #contact .inner_contact{
     background-color: #fff;
-
   }
+   #contact .container{
+     text-align: center;
+   }
+   #contact a img{
+     border-radius: 10px;
+   }
     /* contact end */
 
-footer{border-top: 1px solid #888;}
-footer .inner_footer{overflow: hidden;position: relative;padding: 6vh 0 12vh;}
+footer{position: fixed;left: 00%;top: 65%;width: 100%;z-index: 50;transform: translate(-510px);}
+footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0;transform: rotateZ(270deg);}
   /* footer end */
 
   </style>
@@ -154,14 +161,14 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 6vh 0 12vh;}
     </div>
 
     <header id="header">
-      <div class="inner_header inner">
-        <h1>yongseok's portfolio</h1>
-        <ul>
-          <li>프론트 앤드 개발자</li>
-          <li>
-            <!-- <img src="image/logo.png" alt="로고"> -->
-          </li>
-        </ul>
+      <div class="inner_header inner inner_box">
+          <!-- <h1>yongseok's portfolio</h1> -->
+          <ul>
+            <!-- <li>프론트 앤드 개발자</li> -->
+            <li>
+              <img src="image/logo.png" alt="로고">
+            </li>
+          </ul>
       </div>
     </header>
 
@@ -313,10 +320,14 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 6vh 0 12vh;}
           <h2>연락</h2>
           <div class="inner_bar"></div>
           <div class="container">
-          <p><a aria-label="Email yongseok" href="mailto:yongseok.web@gmail.com" data-position="top" data-tooltip="Email yongseok" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-envelope"></i></a><a alt="" href="yongseok.web@gmail.com" class="hoverline">yongseok.web@gmail.com</a></p>
-          <p><a aria-label="View yongseok on GitHub" href="http://github.com/yongseok-web" target="_blank" data-position="top" data-tooltip="View yongseok on GitHub" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a><a alt="" href="http://github.com/yongseok-web" class="hoverline">github.com/yongseok-web</a></p>
-          <p><a aria-label="View yongseok on KAKAO" href="https://open.kakao.com/o/sYksMHnb" target="_blank" data-position="top" data-tooltip="View yongseok on KAKAO" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-KAKAO"></i></a><a alt="" href="https://open.kakao.com/o/sYksMHnb" class="hoverline">open.kakao.com/o/sYksMHnb</a></p>
-          <img src="" alt="QR코드">
+            <img src="image/frame.png" alt="QR코드">
+          <p><a aria-label="Email yongseok" href="mailto:yongseok.web@gmail.com">yongseok.web@gmail.com</a></p><br>
+          <p><a aria-label="View yongseok on GitHub" href="http://github.com/yongseok-web" target="_blank">
+            <img src="image/github.png" alt="">
+          </a>
+          <a aria-label="View yongseok on KAKAO" href="https://open.kakao.com/o/sYksMHnb" target="_blank">
+            <img src="image/kakao.png" alt="">
+          </a></p>
         </div>
       </article>
   </div>
@@ -325,7 +336,7 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 6vh 0 12vh;}
 
   <footer>
     <div class="inner_footer inner">
-      COPYRIGHT © 2019 yongseok.web ALL RIGHTS RESERVED.
+      <div>COPYRIGHT © 2019 yongseok.web ALL RIGHTS RESERVED.</div>
     </div>
   </footer>
 
@@ -394,7 +405,7 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 6vh 0 12vh;}
           wheel_count();
           setTimeout(function() {
             scrollEvent = false;
-          }, 500);
+          }, 010);
         } else if (wheel_data < 0 && count < 4 && scrollEvent == false) {
           c.preventDefault();
           scrollEvent = true;
@@ -402,7 +413,7 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 6vh 0 12vh;}
           wheel_count();
           setTimeout(function() {
             scrollEvent = false;
-          }, 500);
+          }, 010);
         }
       });
 
@@ -410,7 +421,7 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 6vh 0 12vh;}
       position = $("main").offset();
       $("html").animate({scrollTop: position.top}, 1);
       position = $("header").offset();
-      $("html").animate({scrollTop: position.top}, 500);
+      $("html").animate({scrollTop: position.top}, 1);
       $("nav").css("opacity","0");
 
       function wheel_count() {
@@ -419,11 +430,16 @@ footer .inner_footer{overflow: hidden;position: relative;padding: 6vh 0 12vh;}
         $(sub_bt[2]).css("background-color", "#fff");
         $(sub_bt[3]).css("background-color", "#fff");
         $(sub_bt[4]).css("background-color", "#fff");
-        $(bt[1]).css("background-color", "#0396b6");
-        $(bt[2]).css("background-color", "#0396b6");
-        $(bt[3]).css("background-color", "#0396b6");
-        $(bt[4]).css("background-color", "#0396b6");
-        $(bt[0]).css("background-color", "#0396b6");
+        $(bt[1]).css("background-color", "#238db5");
+        $(bt[2]).css("background-color", "#238db5");
+        $(bt[3]).css("background-color", "#238db5");
+        $(bt[4]).css("background-color", "#238db5");
+        $(bt[0]).css("background-color", "#238db5");
+        $(bt[1]).css("color", "#fff");
+        $(bt[2]).css("color", "#fff");
+        $(bt[3]).css("color", "#fff");
+        $(bt[4]).css("color", "#fff");
+        $(bt[0]).css("color", "#fff");
         $("nav").css("opacity","1");
 
         if (count == 0) {
