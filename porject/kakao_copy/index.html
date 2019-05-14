@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>학습용copy 카카오</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+  <style media="screen">
+  * {font-family: 'Noto Sans KR', sans-serif;margin: 0;padding: 0;}
+  a {padding: 19px 0;color: #222;text-decoration: none;font-weight: bold;}
+
+  #wrap {width: 100%;}
+  header #main {width: 100%;height: 70vh;background-size: 100%;background: url(img/3189.png) no-repeat;}
+  nav {z-index: 5;width: 100%;height: 62px;position: fixed;top: 0;left: 0;}
+  nav a{z-index: 500;}
+  nav ul {list-style: none;display: inline-block;}
+  nav #menu {position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
+  nav #menu ul li {width: 100px;display: inline-block;text-align: center;}
+  nav .han {position: absolute;left: 91%;top: 50%;transform: translate(0%, -50%);display: inline-block;}
+  nav .han li {margin-left: 20px;display: inline-block;}
+  nav span {position: absolute;left: 80px;top: 50%;transform: translate(0%, -50%);font-size: 30px;}
+  #menu_b {display: none;position: fixed;top: 62px;left: 50%;transform: translate(-50%,0);width: 100%;background-color: #fff;z-index: 10}
+  #kakao{padding-bottom: 30px;display: inline-block;position: relative;left: 50%;transform: translate(-50%,0);list-style: none;font-weight: bold;font-size: 13px;padding-top: 20px;background-color: #fff;}
+  #kakao>li{background-color: #fff;float: left;text-align: center;display: inline-block;width: 190px;}
+  #kakao li ul{list-style: none;}
+  #kakao>li>ul>li{font-weight: normal;font-size: 13px;height: 30px;padding: 8px 0px;margin-top: 20px;}
+
+  .bt_{width: 40px;height: 40px;position: absolute;top: 40%;background-repeat: no-repeat;background-position: center;background-color: #000;z-index: 1;}
+  #bt_l{background-image:url(img/le.png);left: 0;}
+  #bt_r{background-image:url(img/ri.png);right: 0;}
+  #bt_top{background-image:url(img/top.png);width: 50px;height: 50px;background-repeat: no-repeat;position: fixed;top: 80vh;right: 25px;display: none;}
+
+  header #type {position: absolute;left: 80px;top: 130px;}
+  header #type #main_text {font-size: 30px;font-weight: bold;}
+  header #type div {border: 1px solid black;background-color: #fff;display: inline;padding: 9px;}
+  header #type span {margin: 10px;color: #000;font-size: 14px;}
+
+  section {margin: auto;width: 90%;text-align: center;font-size: 13px;}
+  section article {float: left;text-align: left;width: 30%;margin: 1%;}
+  section article img{width: 100%;}
+  section article a h2{font-size: 22px;font-weight: bold;}
+  section article .a2{font-size: 12px;color: #ccc;}
+  section article{position: relative;}
+  .sec2 article h4{position: absolute;top: 7px;left: 10px;}
+  .sec1{padding-top: 50px;}
+  .sec1{padding-bottom: 200px;}
+  .sec1 h4{padding-bottom: 15px;}
+  .sec1 h2{padding-bottom: 15px;}
+  .sec2 h2{padding-bottom: 15px;}
+  .sec2{padding-bottom: 300px;}
+
+  footer{border-top: 1px solid #ccc;}
+  footer ul li{margin-left: 5px;display: inline-block;}
+  #site{position: relative;width: 160px;border-bottom: 1px solid black;}
+  #site span{float: right;}
+  #site ul{font-weight: normal;font-size: 0.8em;padding: 10px 0;position: absolute;top: -200px;background-color: #fff;border: 1px solid #ccc;width: 160px;color: #ccc;}
+  #site ul li{margin-left: 10px;padding: 5px 0;}
+  @media (max-width:1340px) {
+    #wrap {width: 1300px;}
+    header {height: 65vh;}
+    nav {width: 1300px;}}
+
+    #help{position: fixed;font-size: 40px;color: #f00;text-align: center;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 999;width: 1300px;text-shadow: 1px 1px 0 #ccc;background-color: #FFF;border-radius: 30px;padding: 50px;opacity: .9;}
+    #help span{font-size: 20px;color: #000;}
+  </style>
+</head>
+
+<body>
+  <div id="help">주의!<br>본 페이지는 웹 제작 기능적 학습을 위해 제작된 페이지입니다.<br>카카오 홈페이지의 이미지만을 복제 했음을 알리고,<br> 본 사이트가 카카오의 사이트가 아님을 알립니다.<br>저작권은 최초 디자인 및 게시자한 원저작권자인 Kakao Corp에 있습니다.<br><span>스크롤시 본 문구는 사라집니다.</span></div>
+  <div id="wrap">
+    <header>
+      <div id="main">
+        <div id="bt_l" class="bt_"></div>
+        <div id="bt_r" class="bt_"></div>
+      </div>
+      <div id="type">
+        <span id=main_text>
+          카카오로 연결된 수많은 파트너들과,<br>
+          그들과 함께 더 나은 세상을 만들어나가고자 하는<br>
+          카카오의 진심을 전합니다.
+        </span><br><br>
+
+        <div><span>자세히 보기</span><span>></span></div>
+      </div>
+    </header>
+    <nav>
+      <span><a href="#">kakao</a></span>
+      <div id="menu">
+        <ul>
+          <li><a href="">카카오</a></li>
+          <li><a href="">투자정보</a></li>
+          <li><a href="">서비스</a></li>
+          <li><a href="">소셜임팩트</a></li>
+          <li><a href="">고객지원</a></li>
+          <li><a href="">인재영입</a></li>
+        </ul>
+      </div>
+
+      <ul class="han">
+        <li><a href="#">KOR</a></li>
+        <li><a href="#">ENG</a></li>
+      </ul>
+    </nav>
+    <div id="menu_b">
+      <ul id="kakao">
+
+      </ul>
+    </div>
+  </div>
+
+
+  <section class="sec1">
+    <article class="art1">
+      <h4>PRESS RELEASE</h4>
+      <div class="a1">
+        <H2><a href="">
+            카카오-독립기념관, 임시정부 100주년 기념 <한국독립운동 인명사전> 오픈
+          </a></H2>
+      </div>
+      <div class="a2">
+        - 독립기념관 한국독립운동사연구소가 편찬하여 카카오에서 웹사전으로 공개하는 독립운동가 정보- 대한민국 임시정부 수립기념일에 맞추어 내외국인 아우르는 대표적 독립운동가 144인 우선 공개- 카카오톡 #...
+      </div>
+    </article>
+    <article class="art2">
+      <h4>STOCK</h4>
+      <div class="a1" style="font-size: 28px;font-weight: bold;padding-bottom: 40px;">
+        102,000
+      </div>
+      <div class="a2">
+        2019-04-12 11:36:15
+      </div>
+    </article>
+    <article class="art3">
+      <h4>PRIVACY POLICY</h4>
+      <div class="a1">
+        <h2>
+          카카오는 데이터의 연결과 보호의 균형을 위해
+          언제나 최선을 다 하겠습니다.
+        </h2>
+      </div>
+      <div class="a2">
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sec2" style="clear: both;margin-bottom: 300px;">
+    <article class="">
+      <img src="img/94.png" alt="">
+      <h4>SERVICE</h4>
+      <H2><a href="">
+          카카오톡에서 장보면 이마트가 쓱~배송해준다! 새로운 장보기 습관, 카카오장보기.</a></H2>
+      <div class="a2">
+        카카오장보기는 카카오가 올 한 해 중점적으로 추진하고 있는 카카오톡 진화의 일환으로 기획됐다. 카카오톡으로 쉽고 편리하게 장보고, 원하는 시간에 집 앞까지 배송받을 수 있는 서비스다....</div>
+    </article>
+    <article class="">
+      <img src="img/95.png" alt="">
+      <h4 style="color:#fff">CAREERS</h4>
+      <H2><a href="">
+          문제를 새롭게 정의하고, 이를 풀어내기 위한 접근 방식을 집요하게 고민할 줄 아는 능력이 중요합니다.</a></H2>
+      <div class="a2">
+        UX리서치파트는 말 그대로 사람들의 경험을 조사하는 부서로, 사용자 중심으로 서비스가 나아갈 방향을 제시하는 부서입니다. 우리의 타겟 사용자들을 만나 그들이 누구이며 평소 어떤 행동들...</div>
+    </article>
+    <article class="">
+      <img src="img/3254.png" alt="">
+      <h4>SOCIAL IMPACT</h4>
+      <H2><a href="">
+          세계 행복의 날 기념, 같이가치 ‘안녕하세요’ 캠페인을 소개합니다!</a></H2>
+      <div class="a2">
+        '세계 행복의 날'이라는 기념일을 들어보신 적 있나요? 2012년 국제연합(UN)이 모든 사람들이 행복하게 살 수 있도록 전 세계가 함께 노력하자는 취지로 매년 3월 20일을 '세계 ...</div>
+    </article>
+  </section>
+
+<div id="bt_top"></div>
+  <footer style="clear: both;padding: 30px;margin-top: 150px;font-size: 14px;color: #aaa;font-weight: none;">
+    <ul>
+      <li>이용약관</li>
+      <li>위치기반서비스이용약관</li>
+      <li>개인정보처리방침</li>
+      <li>운영정책</li>
+      <li>청소년보호정책</li>
+      <li>권리침해신고안내</li>
+      <li>공지사항</li>
+      <li>사이버윤리실</li>
+    </ul>
+    <span id="site" style="float: right;">
+      관련사이트     <span>+</span>
+      <ul style="display: none;">
+        <li>카카오AI</li>
+        <li>카카오 프라이버시</li>
+        <li>카카오 디벨로퍼스</li>
+        <li>다음 포털 사이트</li>
+        <li>동반성장 사이트</li>
+        <li>제주 with kakao</li>
+      </ul>
+    </span>
+    Copyright © Kakao Corp. All rights reserved.
+  </footer>
+  </div>
+
+  <script>
+  var tt=0;
+    //메뉴바
+$('#menu_b').css('border-top', ' 1px solid #ccc');
+
+    $('nav').hover(function() {
+      $('nav a').css('color', '#000');
+      $('nav').css('background', '#fff');
+      tt=1
+    }, function() {
+      $('nav a').css('color', '#fff');
+      $('nav').css('background', 'none');
+      tt=0
+    });
+
+    $('#menu_b').hover(function() {
+      $('nav').css('background', '#fff');
+      $('#menu_b').css('display', 'block');
+      tt=1
+    }, function() {
+      $('nav').css('background', 'none');
+      $('#menu_b').css('display', 'none');
+      tt=0
+    });
+
+    $('#menu li:eq(0)').hover(function() {
+      document.getElementById('kakao').innerHTML = "<li>카카오 소개<ul><li>비전</li><li>카카오문화</li><li>걸어온 길</li><li>CI</li><li>윤리규정</li></ul></li><li>카카오 AI<ul><li>소개</li><li>알고리즘</li></ul></li><li>자회사</li><li>카카오 소개<ul><li>비전</li><li>카카오문화</li><li>걸어온 길</li><li>CI</li><li>윤리규정</li></ul></li><li>비즈니스<ul><li>광고 안내</li><li>제휴안내</li><li>Kakao for Business</li></ul></li><li>홍보채널<ul><li>보도자료</li><li>브랜드 영상</li><li>미디어 행사</li><li>Kakao Travel Day</li></ul></li><li>오시는 길</li><ul></ul>";
+      $('#menu_b').css('display', 'block');
+    }, function() {
+      $('#menu_b').css('display', 'none');
+    });
+    $('#menu li:eq(1)').hover(function() {
+      document.getElementById('kakao').innerHTML = "<li>경영정보<ul><li>주주구성</li><li>이사회</li><li>정관</li><li>기업지배구조</li></ul></li><li><ul>공시정보  </ul></li><li><ul>주가정보  </ul></li><li><ul>재무정보  </ul></li><li>연결재무제표  <ul><li>별도재무제표</li><li>신용등급</li></ul></li><li> IR 일정 <ul><li>  IR 행사</li><li>  주주총회</li><li>  IR 미팅예약</li></ul></li><li>IR 자료실<ul><li>  실적발표</li><li>  정기보고서</li><li>  IR FAQ</li><li>  증권사커버리지</li></ul></li><li>공고<ul><li>  배당정보</li><li>  공고사항</li></ul></li>";
+      $('#menu_b').css('display', 'block');
+    }, function() {
+    });
+    $('#menu li:eq(2)').hover(function() {
+      document.getElementById('kakao').innerHTML = "<li>포털<ul><li>Daum</li><li>Daum 뉴스</li><li>Daum 검색</li></ul></li><li>커뮤니케이션<ul><li>카카오톡</li><li>카카오스토리</li><li>카카오톡 치즈</li><li>Daum 메일</li><li>Daum 카페</li><li>아지트</li><li>티스토리</li><li>브런치</li></ul></li><li>콘텐츠<ul><li>카카오페이지</li><li>카카오TV</li><li>카카오뮤직</li><li>카카오프렌즈</li><li>Daum 웹툰</li><li>1boon</li><li>스토리펀딩</li></ul></li><li>커머스<ul><li>카카오톡 선물하기</li><li>카카오스타일</li><li>카카오톡 쇼핑하기</li><li>카카오장보기</li><li>Daum 쇼핑</li></ul></li><li>게임<ul><li>카카오게임</li></ul></li><li>핀테크<ul><li>카카오페이</li><li>모빌리티&라이프</li><li>카카오 T</li><li>카카오 T 대리</li><li>카카오내비</li><li>카카오맵</li><li>카카오버스</li><li>카카오지하철</li><li>카카오헤어샵</li></ul></li><li>소셜임팩트<ul><li>카카오같이가치</li></ul></li>";
+      $('#menu_b').css('display', 'block');
+      $('#menu_b').css('border-top', ' 1px solid #ccc')
+    }, function() {
+      $('#menu_b').css('display', 'none');
+    });
+    $('#menu li:eq(3)').hover(function() {
+      document.getElementById('kakao').innerHTML = "<li><ul>소셜임팩트 서비스<li>카카오같이가치</li><li>카카오메이커스</li></ul></li><li><ul><li>사회공헌</li><li>Next</li><li>Connect</li><li>Kakao Krew</li></ul></li><li><ul>상생<li>상생센터</li><li>상생서포터즈</li><li>Kakao 클래스</li></ul></li><li><ul>제주지역협력<li>교육 산학</li><li>지역 상생</li><li>문화 교류</li><li>제주창조경제혁신센터</li></ul></li><li><ul>Partners with Kakao</ul></li>";
+      $('#menu_b').css('display', 'block');
+      $('#menu_b').css('border-top', ' 1px solid #ccc')
+    }, function() {
+      $('#menu_b').css('display', 'none');
+    });
+
+var coco=0;
+$('#site').click(function() {if(coco==0){
+  $('#site').css('color','#000')
+  $('#site').css('font-weight','bold')
+  $('#site ul li').css('display', 'block');
+  $('#site ul').css('display', 'block');
+  $('#site span').html('x');
+  coco=1;
+}else {
+  $('#site ul').css('display', 'none');
+  $('#site').css('font-weight','normal')
+  $('#site').css('color','#ccc');
+  $('#site span').html('+');
+  coco=0;
+}});
+
+    // 메인 3초 단위 교체
+    var count = 1;
+    $('#bt_l').click(function() {if (count == 0) {count = 3;} else {count--;}});
+    $('#bt_r').click(function() {
+      count++;
+    });
+
+    setInterval(function() {
+      if (count % 4 == 1) {
+        $('#main').css('background', 'url(img/1652.png) no-repeat');
+        $('#main_text').css('color', '#fff');
+        $('nav a').css('color', '#fff');
+        $('#type div').css('border', '1px solid #000');
+        document.getElementById('main_text').innerHTML = "일상에 필요한 모든 것들을 연결해주는<br>당신과 가장 가까운 인공지능을 만나보세요";
+      } else if (count % 4 == 2) {
+        $('#main').css('background', 'url(img/1657.png) no-repeat');
+        $('#main_text').css('color', '#000');
+        $('nav a').css('color', '#000');
+        $('#type div').css('border', '0');
+        document.getElementById('main_text').innerHTML = "카카오는 새로운 연결을 통해<br>더 편리하고 즐거운 세상을 꿈꿉니다.";
+      } else if (count % 4 == 3) {
+        $('#main').css('background', 'url(img/2928.png) no-repeat');
+        $('#main_text').css('color', '#fff');
+        $('nav a').css('color', '#fff');
+        $('#type div').css('border', '1px solid #000');
+        document.getElementById('main_text').innerHTML = "끊임없이 이동하는 우리의  속 카카오는 어 모습일까요?<br>이동에 대한 카카오의 모든 이야기들을 담았습니다.";
+      } else if (count % 4 == 0) {
+        $('#main').css('background', 'url(img/3189.png) no-repeat');
+        $('#main_text').css('color', '#000');
+        $('nav a').css('color', '#000');
+        $('#type div').css('border', '0');
+        document.getElementById('main_text').innerHTML = "카카오로 연결된 수많은 파트너들과,<br>그들과 함께 더 나은 세상을 만들어나가고자 하는<br>카카오의 진심을 전합니다.";
+        count = 0;
+      }
+      if(tt==1){
+        $('nav a').css('color', '#000');
+      }
+      else if(tt==2){
+        $('nav a').css('color', '#000');
+        $('nav').css('background', '#fff');
+      }
+    }, 000);
+
+    setInterval(function() {if (count % 4 == 4) {count = 0;}count++;}, 3000);
+
+
+
+        window.onscroll = function() {scrollFunction_nav();scrollFunction();};
+                function scrollFunction_nav() {
+               if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+                 $('#help').css('display','none')
+                 $('nav a').css('color', '#000');
+                 $('nav').css('background', '#fff');
+                 $('nav').css('border-bottom', ' 1px solid #ccc')
+                 $('#bt_top').css('display',"block")
+                 tt=2
+               } else {
+                 $('nav a').css('color', 'auto');
+                 $('nav').css('background', 'none');
+                 $('nav').css('border-bottom', ' 0px')
+                 $('#bt_top').css('display',"none")
+                 tt=0
+               }}
+                 $('#bt_top').click(function () {
+               document.body.scrollTop = 0;
+               document.documentElement.scrollTop = 0;
+             })
+         //footer
+  </script>
+</body>
+
+</html>
