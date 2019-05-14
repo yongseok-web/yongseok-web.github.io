@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="css/reset.css">
 
   <style media="screen">
-#wrap{background: url(image/bg.png);}
+#wrap{width: 100%;background: url(image/bg.png);}
 .inner{width: 990px;margin: 0 auto;padding-top: 2%;padding-bottom: 4%;}
 .inner_box{
 height: 80vh;position: relative;top: 5vh;margin-bottom: 5vh;
@@ -49,6 +49,7 @@ header img{width: 500px;}
 /* header end */
 
 h2{margin-top: 2%;font-weight: bold;text-align: center;font-size: 30pt;}
+h3{font-size: 15px;font-weight: bold;}
 .inner_bar{margin: auto;margin-top: 1%;margin-bottom: 6%;width: 10%;height: 4px;background: #444649;}
 #header .inner_header{background-color: #fff;}
 main{height: 100vh;}
@@ -72,17 +73,17 @@ section #project{height: 100vh;}
 
 section #study{height: 100vh;}
 #study .inner_study{background-color: #fff;}
-#study ul{margin-left: 5%;}
+#study ul{margin-left: 5%; }
 #study ul>li{margin-top: 1%;}
 #study li ul li{display: inline-block;width: 33%;}
-
 #study h3{font-weight: bold;}
 #study figure img{width: 80%;}
+.inner_study>ul>li{}
 /* study end */
 
 section #contact{height: 100vh;}
 #contact .inner_contact{background-color: #fff;}
-#contact .container{text-align: center;}
+#contact .container{text-align: center; background-color: #ccc;padding: 5% 0;}
 #contact a img{border-radius: 10px;}
 /* contact end */
 
@@ -234,60 +235,25 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
           </h2>
           <ul>
             <li>
-              <h3>
-                HTML + CSS
-
-              </h3>
               <ul>
-                <li>교재<figure><img src="" alt="">                  <figcaption>
-
-                                  </figcaption></figure></li>
-                <li>실습<figure><img src="" alt="">                  <figcaption>
-
-                                  </figcaption></figure></li>
+                <h3>HTML + CSS</h3>
+                <li>교재<figure><img src="" alt=""><figcaption></figcaption></figure></li>
+                <li>실습<figure><img src="" alt=""><figcaption></figcaption></figure></li>
               </ul>
             </li>
             <li>
-              <h3>
-                js, jquery
-
-
-              </h3>
               <ul>
-                <li>교재<figure><img src="" alt="">                  <figcaption>
-
-                                  </figcaption></figure></li>
-                <li>실습<figure><img src="" alt="">                  <figcaption>
-
-                                  </figcaption></figure></li>
-                <li>카드뒤집기 게임제작<figure><img src="" alt="">                  <figcaption>
-
-                                  </figcaption></figure></li>
+                <h3>js, jquery</h3>
+                <li>교재<figure><img src="" alt=""><figcaption></figcaption></figure></li>
+                <li>실습<figure><img src="" alt=""><figcaption></figcaption></figure></li>
+                <li>카드뒤집기 게임제작<figure><img src="" alt=""><figcaption></figcaption></figure></li>
               </ul>
             </li>
             <li>
-              <h3>
-                PHP 프로그래밍
-
-              </h3>
               <ul>
-                <li><a href="Presentation/PHP/PHP_programming/index.html">PHP 프로그래밍 기초<figure><img src="Presentation/PHP/PHP_programming/1.PNG" alt="">                  <figcaption>
-2019.04.02. 작성
-                                  </figcaption></figure></a></li>
-                <li><a href="Presentation/PHP/PHP_mysql/index.html">MySQL 데이터베이스<figure><img src="Presentation/PHP/PHP_mysql/1.PNG" alt="">                  <figcaption>
-2019.04.13. 작성                                  </figcaption></figure></a></li>
-                <li>게시판 기능별 프로그램 알고리즘<figure><img src="" alt="">                  <figcaption>
-
-                                  </figcaption></figure></li>
-              </ul>
-            </li>
-            <li>
-              <h3>
-                기타
-
-              </h3>
-              <ul>
-                <li><a href="Presentation/GitHub/index.html">GitHub 이해하기<figure><img src="Presentation/GitHub/1.PNG" alt=""><figcaption>2019.03.28. 작성</figcaption></figure></a></li>
+                <li><h3>PHP 프로그래밍</h3><a href="Presentation/PHP/PHP_programming/index.html">PHP 프로그래밍 기초<figure><img src="Presentation/PHP/PHP_programming/1.PNG" alt=""><figcaption>2019.04.02. 작성</figcaption></figure></a></li>
+                <li><a href="Presentation/PHP/PHP_mysql/index.html">MySQL 데이터베이스<figure><img src="Presentation/PHP/PHP_mysql/1.PNG" alt=""><figcaption>2019.04.13. 작성</figcaption></figure></a></li>
+                <li><h3>기타</h3><a href="Presentation/GitHub/index.html">GitHub 이해하기<figure><img src="Presentation/GitHub/1.PNG" alt=""><figcaption>2019.03.28. 작성</figcaption></figure></a></li>
               </ul>
             </li>
           </ul>
@@ -297,7 +263,7 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
       <article id="contact">
         <div class="inner_contact inner inner_box">
           <h2>CONTACT</h2>
-          <div class="inner_bar"></div><br><br><br><br><br>
+          <div class="inner_bar"></div>
           <div class="container">
             <img src="image/frame.png" alt="QR코드">
           <p><a aria-label="Email yongseok" href="mailto:yongseok.web@gmail.com">yongseok.web@gmail.com</a></p><br>
