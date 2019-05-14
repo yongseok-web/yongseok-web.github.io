@@ -4,14 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Description" content="YONGSEOK PORTFOLIO, 최용석, 포트폴리오" />
-  <meta name="Keywords" content="YONGSEOK PORTFOLIO, 최용석, 포트폴리오, 웹퍼블리셔" />
+  <meta name="Description" content="YONGSEOK PORTFOLIO, 최용석, 포트폴리오">
+  <meta name="Keywords" content="YONGSEOK PORTFOLIO, 최용석, 포트폴리오, 웹퍼블리셔">
   <meta http-equiv="X-UA-Compatible" content="ie=edge; chrome=1">
-  <meta http-equiv="Subject" content="YONGSEOK PORTFOLIO" />
-  <meta http-equiv="Title" content="YONGSEOK PORTFOLIO" />
-  <meta http-equiv="Author" content="YONG SEOK" />
-  <meta http-equiv="Email" content="yongseok.web@gmail.com" />
-  <meta http-equiv="Copyright" content="yongseok-web.github.io/" />
+  <meta http-equiv="Subject" content="YONGSEOK PORTFOLIO">
+  <meta http-equiv="Title" content="YONGSEOK PORTFOLIO">
+  <meta http-equiv="Author" content="YONG SEOK">
+  <meta http-equiv="Email" content="yongseok.web@gmail.com">
+  <meta http-equiv="Copyright" content="yongseok-web.github.io/">
+  <link rel="shortcut icon" href="icon/favicon.ico">
+  <link rel="icon" href="icon/favicon32.ico" sizes="32x32">
+  <link rel="icon" href="icon/favicon48.ico" sizes="48x48">
+  <link rel="icon" href="icon/favicon64.ico" sizes="64x64">
 
   <title>YONGSEOK PORTFOLIO</title>
 
@@ -45,10 +49,11 @@ nav ul li h2{display: none;}
 header{height: 100vh;}
 #header .inner_header{text-align: center;font-size: 50px;font-weight: bold;}
 h1{font-weight: bold;text-align: center;font-size: 60pt;}
-header img{width: 500px;}
+header img{padding: 28% 0;width: 555px;}
 /* header end */
 
-h2{margin-top: 2%;font-weight: bold;text-align: center;font-size: 30pt;}
+h2{margin-top: 2%;font-weight: bold;text-align: center;font-size: 30pt;padding-bottom: 3%;}
+h2>span{border-bottom: 3px solid #000}
 h3{font-size: 15px;font-weight: bold;}
 .inner_bar{margin: auto;margin-top: 1%;margin-bottom: 6%;width: 10%;height: 4px;background: #444649;}
 #header .inner_header{background-color: #fff;}
@@ -83,7 +88,7 @@ section #study{height: 100vh;}
 
 section #contact{height: 100vh;}
 #contact .inner_contact{background-color: #fff;}
-#contact .container{text-align: center; background-color: #ccc;padding: 5% 0;}
+#contact .container{text-align: center; background-color: #ccc;padding: 05% 0;margin-top: 4%;}
 #contact a img{border-radius: 10px;}
 /* contact end */
 
@@ -132,8 +137,7 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
 
     <main id='main'>
       <div class="inner_main inner inner_box">
-        <h2>ABOUT</h2>
-        <div class="inner_bar"></div>
+        <h2><span>ABOUT</span></h2>
         <div class="inner_sec">
 
         </div>
@@ -163,14 +167,14 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
     </main>
 
     <section id="portfolio">
-      <h2>portfolio</h2>
+      <h2><span>portfolio</span></h2>
       <div class="inner_section">
 
         <article id="project">
           <div class="inner_project inner inner_box">
 
-            <h2>PROJECTS</h2>
-            <div class="inner_bar"></div>
+            <h2><span>PROJECTS</span></h2>
+            <div id="pro1"></div>
             <ul>
               <li>
                 <h3>
@@ -230,9 +234,7 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
       <article id="study">
         <div class="inner_study inner inner_box">
 
-          <h2>STUDY
-            <div class="inner_bar"></div>
-          </h2>
+          <h2><span>STUDY</span></h2>
           <ul>
             <li>
               <ul>
@@ -246,45 +248,37 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
                 <h3>js, jquery</h3>
                 <li>교재<figure><img src="" alt=""><figcaption></figcaption></figure></li>
                 <li>실습<figure><img src="" alt=""><figcaption></figcaption></figure></li>
-                <li>카드뒤집기 게임제작<figure><img src="" alt=""><figcaption></figcaption></figure></li>
+                <li><a href="web_study/javascript/game/index.html" target="_blank">카드뒤집기 게임제작<figure><img src="web_study/javascript/game/home.png" alt=""><figcaption>2019.03.27. 제작</figcaption></figure></a></li>
               </ul>
             </li>
             <li>
               <ul>
-                <li><h3>PHP 프로그래밍</h3><a href="Presentation/PHP/PHP_programming/index.html">PHP 프로그래밍 기초<figure><img src="Presentation/PHP/PHP_programming/1.PNG" alt=""><figcaption>2019.04.02. 작성</figcaption></figure></a></li>
-                <li><a href="Presentation/PHP/PHP_mysql/index.html">MySQL 데이터베이스<figure><img src="Presentation/PHP/PHP_mysql/1.PNG" alt=""><figcaption>2019.04.13. 작성</figcaption></figure></a></li>
-                <li><h3>기타</h3><a href="Presentation/GitHub/index.html">GitHub 이해하기<figure><img src="Presentation/GitHub/1.PNG" alt=""><figcaption>2019.03.28. 작성</figcaption></figure></a></li>
+                <li><h3>PHP 프로그래밍</h3><a href="Presentation/PHP/PHP_programming/index.html" target="_blank">PHP 프로그래밍 기초<figure><img src="Presentation/PHP/PHP_programming/1.PNG" alt=""><figcaption>2019.04.02. 작성</figcaption></figure></a></li>
+                <li><a href="Presentation/PHP/PHP_mysql/index.html" target="_blank">MySQL 데이터베이스<figure><img src="Presentation/PHP/PHP_mysql/1.PNG" alt=""><figcaption>2019.04.13. 작성</figcaption></figure></a></li>
+                <li><h3>기타</h3><a href="Presentation/GitHub/index.html" target="_blank">GitHub 이해하기<figure><img src="Presentation/GitHub/1.PNG" alt=""><figcaption>2019.03.28. 작성</figcaption></figure></a></li>
               </ul>
             </li>
           </ul>
         </div>
-
       </article>
+
       <article id="contact">
         <div class="inner_contact inner inner_box">
-          <h2>CONTACT</h2>
-          <div class="inner_bar"></div>
+          <h2><span>CONTACT</span></h2>
           <div class="container">
             <img src="image/frame.png" alt="QR코드">
-          <p><a aria-label="Email yongseok" href="mailto:yongseok.web@gmail.com">yongseok.web@gmail.com</a></p><br>
-          <p><a aria-label="View yongseok on GitHub" href="http://github.com/yongseok-web" target="_blank">
-            <img src="image/github.png" alt="">
-          </a>
-          <a aria-label="View yongseok on KAKAO" href="https://open.kakao.com/o/sYksMHnb" target="_blank">
-            <img src="image/kakao.png" alt="">
-          </a></p>
-        </div>
+            <p><a aria-label="Email yongseok" href="mailto:yongseok.web@gmail.com">yongseok.web@gmail.com</a></p><br>
+            <p><a aria-label="View yongseok on GitHub" href="http://github.com/yongseok-web" target="_blank"><img src="image/github.png" alt="GitHub"></a>
+            <a aria-label="View yongseok on KAKAO" href="https://open.kakao.com/o/sYksMHnb" target="_blank"><img src="image/kakao.png" alt="카카오톡"></a></p>
+          </div>
       </article>
   </div>
   </section>
-
-
   <footer>
     <div class="inner_footer inner">
       <div>COPYRIGHT © 2019 yongseok.web ALL RIGHTS RESERVED.</div>
     </div>
   </footer>
-
   </div>
   <script type="text/javascript">
     $(document).ready(function() {
