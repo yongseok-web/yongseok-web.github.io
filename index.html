@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="Description" content="YONGSEOK PORTFOLIO, 최용석, 포트폴리오">
-  <meta name="Keywords" content="YONGSEOK PORTFOLIO, 최용석, 포트폴리오, 웹퍼블리셔">
+  <meta name="Keywords" content="YONGSEOK PORTFOLIO, 최용석, 포트폴리오">
   <meta http-equiv="X-UA-Compatible" content="ie=edge; chrome=1">
   <meta http-equiv="Subject" content="YONGSEOK PORTFOLIO">
   <meta http-equiv="Title" content="YONGSEOK PORTFOLIO">
@@ -30,405 +30,271 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="css/reset.css">
-
+  <link rel="stylesheet" href="css/back_style.css">
   <style media="screen">
 body{background: url(image/bg.png)}
+* {font-family: 'Noto Sans KR', sans-serif;margin: 0;padding: 0;}
 #wrap{width: 100%;font-family: 'Noto Sans KR'}
 .inner{width: 990px;margin: 0 auto;padding-top: 2%;padding-bottom: 4%;}
 .inner_box{
-height: 80vh;position: relative;top: 5vh;margin-bottom: 5vh;
+height:600px;margin: 10vh auto;background-color: #fefefe;
 -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);}
-header, main, article{position: relative;}
-
-nav{display: none;position: fixed;width: 100%;height: 50px;z-index: 100;top: 5vh;}
-nav ul{width: 990px;height: 100%;margin: 0 auto;background-color: rgb(64, 142, 246);text-align: center;font-size: 0;overflow: hidden;}
-nav ul li{display: inline-block;font-size: 25px;width: 20%;padding: 12px 0;cursor: pointer;border-radius: 15px}
-nav ul li:hover{background-color: white;}
-nav ul li h2{display: none;}
-.sub_menu{width: 30px;height: 200px;position: fixed;top: 50%;left: 50%;transform: translate(525px,-50%);z-index: 90;}
-.sub_menu span{display: inline-block;width: 20px;height: 20px;background-color: #FFF;border-radius: 50%;cursor: pointer;  }
-.sub_menu span:hover{background-color: #ff6c6c;}
-/* nav end */
-
-header{height: 100vh;}
-#header .inner_header{text-align: center;font-size: 50px;font-weight: bold;}
-h1{font-weight: bold;text-align: center;font-size: 60pt;}
-header img{padding: 28% 0;width: 555px;}
-/* header end */
-
-h2{margin-top: 2%;font-weight: bold;text-align: center;font-size: 30pt;padding-bottom: 3%;font-family: 'Yeon Sung'}
-h2>span{border-bottom: 3px solid #000}
 h3{font-size: 15px;font-weight: bold;}
-.inner_bar{margin: auto;margin-top: 1%;margin-bottom: 6%;width: 10%;height: 4px;background: #444649;}
-#header .inner_header{background-color: #fff;}
-main{height: 100vh;}
-#main .inner_main{background-color: #fff;text-align: center;}
-#main>div>ul{width: 100%;}
-#main>div>ul>li{width: 13%;}
-#main>div>ul>li img{width: 100%;}
-#main li{display: inline-block;}
-#main .inner_sec{width: 49%;display: inline-block;}
-/* main end */
+.inner h2{margin-top: 5%;font-weight: bold;text-align: center;font-size: 30pt;padding-bottom: 2%;font-family: 'Yeon Sung'}
 
-#portfolio{}
-#portfolio>h2{display: none;}
 
-section #project{height: 100vh;}
-#project .inner_project{background-color: #fff;}
-#project li{margin: 0 3%;text-align: center;width: 37%;display: inline-block;}
-#project ul{width: 100%;background-color: #ccc;text-align: center;}
-#project figure img{width: 100%;margin: 5px;}
-/* project end */
+nav {z-index: 5;width: 100%;height: 62px;position: fixed;top: 0;left: 0;background-color: #fff;border-bottom:1px solid #ccc;}
+nav a{z-index: 500; font-size: 1rem;}
+nav ul {list-style: none;display: inline-block;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
+nav ul li {width: 100px;display: inline-block;text-align: center;}
+nav ul h2 {font-size: 0;}
+/* nav end*/
 
-section #study{height: 100vh;}
-#study .inner_study{background-color: #fff;}
-#study ul{margin-left: 5%; }
-#study ul>li{margin-top: 1%;}
-#study li ul li{display: inline-block;width: 33%;}
-#study h3{font-weight: bold;}
-#study figure img{width: 80%;}
-.inner_study>ul>li{}
-/* study end */
+#pro2{display: none;}
+#pro3{display: none;}
+#pro4{display: none;}
+/* project end*/
+
+#stu2{display: none;}
+#stu3{display: none;}
+/* study end*/
 
 section #contact{height: 100vh;}
 #contact .inner_contact{background-color: #fff;}
-#contact .container{text-align: center; background-color: #ccc;padding: 05% 0;margin-top: 4%;}
+#contact .container{text-align: center; padding: 0;margin-top: 2%;}
 #contact a img{border-radius: 10px;}
 /* contact end */
 
-footer{position: fixed;left: 00%;top: 65%;width: 100%;z-index: 50;transform: translate(-510px);}
-footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0;transform: rotateZ(270deg);}
+footer{border-top: 1px solid #ccc;background-color: #eeeeee;}
 /* footer end */
-@media (max-width: 1024px) {
-#wrap{width: 1024px;}
-}
+
+#bt_top{cursor: pointer;border-radius: 15px;width: 40px;height: 40px;background-repeat: no-repeat;position: fixed;top: 90vh;right: 25px;display: none;background-color: #fff;}
+#bt_top h3{position: relative;top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center;}
+
   </style>
 
-</head>
-
 <body>
-  <div id="wrap">
-    <nav>
+    <span id="header_i">.</span>
+    <div class='box'>
+      <div class='wave -one'></div>
+      <div class='wave -two'></div>
+      <div class='wave -three'></div>
+      <img src="image/logo.png" alt="로고">
+
+    </div>
+    <div id="wrap">
+      <nav>
+        <ul><h2>목차</h2>
+          <li class="bt"><a href="#header_i">HOME</a>
+          </li><li class="bt"><a href="#main_i">ABOUT</a>
+          </li><li class="bt"><a href="#project_i">PROJECT</a>
+          </li><li class="bt"><a href="#study_i">STUDY</a>
+          </li><li class="bt"><a href="#contact_i">CONTACT</a></li>
+        </ul>
+      </nav>
+<!-- 메뉴 -->
+
+<header id="header">
+  <div class="inner_header inner inner_box">
       <ul>
-        <li class="bt"><a href="#header">HOME</a></li>
-        <li class="bt"><a href="#main">ABOUT</a></li>
-        <li class="bt"><a href="#portfolio">PORTFOLIO</a></li>
-        <li class="bt"><a href="#study">STUDY</a></li>
-        <li class="bt"><a href="#contact">CONTACT</a></li>
         <li>
-          <h2>목차</h2>
         </li>
       </ul>
-    </nav>
+  </div>
+  <span id="main_i">.</span>
+</header>
+<!-- HOME -->
 
-    <div class="sub_menu">
-    <span class="sub_bt"></span>
-      <span class="sub_bt"></span>
-      <span class="sub_bt"></span>
-      <span class="sub_bt"></span>
-      <span class="sub_bt"></span>
+<main id='main'>
+  <div class="inner_main inner inner_box">
+    <h2><span>ABOUT</span></h2>
+    <div class="inner_sec">
+
     </div>
+    <div class="inner_sec">
+      <ul>
+        <h3>NAME</h3>
+        <li>최용석</li>
+      </ul>
+      <ul>
+        <h3>EDUCATION</h3>
+        <li>2019 경기산업기술교육센터 웹콘텐츠디자인 과정 수료(예정)</li>
+      </ul>
 
-    <header id="header">
-      <div class="inner_header inner inner_box">
-          <!-- <h1>yongseok's portfolio</h1> -->
-          <ul>
-            <!-- <li>프론트 앤드 개발자</li> -->
-            <li>
-              <img src="image/logo.png" alt="로고">
-            </li>
-          </ul>
-          <div id="in_header">
-            <!DOCTYPE html>
-            <html lang="ko" dir="ltr">
-              <head>
-                <meta charset="utf-8">
-                <title>안녕하세요</title>
-              </head>
-              <body>
-                최용석의 포트폴리오 입니다.
-              </body>
-            </html>
-          </div>
-      </div>
-    </header>
+    </div>
+    <ul>
+      <h3>SKILLS</h3>
+      <li><a href="web_study/html5.list.html"><img src="web_study/html.png" alt="HTML5"></a></li>
+      <li><a href="web_study/css3/list.html"><img src="web_study/css.png" alt="CSS3"></a></li>
+      <li><a href="web_study/js/list.html"><img src="web_study/js.png" alt="JavaScript"></a></li>
+      <li><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/php.png" alt="PHP"></a></li>
+      <li><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/mysql.png" alt="PHP"></a></li>
+      <li><a href="design_study/Adobe Photoshop.html"><img src="design_study/ps.png" alt="Adobe Photoshop"></a></li>
+    </ul>정보기술자격(ITQ) A등급(아래한글 한글엑셀 한글파워포인트), 컴퓨터활용능력 2급, 워드프로세서
 
-    <main id='main'>
-      <div class="inner_main inner inner_box">
-        <h2><span>ABOUT</span></h2>
-        <div class="inner_sec">
+  </div>
+  <span id="project_i">.</span>
+</main>
+<!-- ABOUT -->
 
-        </div>
-        <div class="inner_sec">
-          <ul>
-            <h3>NAME</h3>
-            <li>최용석</li>
-          </ul>
-          <ul>
-            <h3>EDUCATION</h3>
-            <li>2019 경기산업기술교육센터 웹콘텐츠디자인 과정 수료(예정)</li>
-          </ul>
 
-        </div>
+    <article id="project">
+      <div class="inner_project inner inner_box">
+        <h2><span>PROJECTS</span></h2>
+        <div id="pro"></div>
         <ul>
-          <h3>SKILLS</h3>
-          <li><a href="web_study/html5.list.html"><img src="web_study/html.png" alt="HTML5"></a></li>
-          <li><a href="web_study/css3/list.html"><img src="web_study/css.png" alt="CSS3"></a></li>
-          <li><a href="web_study/js/list.html"><img src="web_study/js.png" alt="JavaScript"></a></li>
-          <li><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/php.png" alt="PHP"></a></li>
-          <li><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/mysql.png" alt="PHP"></a></li>
-          <li><a href="design_study/Adobe Photoshop.html"><img src="design_study/ps.png" alt="Adobe Photoshop"></a></li>
-          <li><a href="design_study/Adobe Illustrator.html"><img src="design_study/Ai.png" alt="Adobe Illustrator"></a></li>
-        </ul>정보기술자격(ITQ) A등급(아래한글 한글엑셀 한글파워포인트), 컴퓨터활용능력 2급, 워드프로세서
+          <li id="pro1">
+            <h3>
+              원공인중개사 홈페이지 제작
+              팀프로젝트
+            </h3>
+            <figure>
+              <img src="image/pro1.png" alt="">
+              <figcaption>
+                2019.04.05~2019.05.09<br>
+                html, CSS, javascript, php, MySQL 활용한 팀프로젝트 작업
+              </figcaption>
+            </figure>
+          </li>
+          <li id="pro2">
+            <h3>
+              카카오 홈페이지
+              카피페이지
+            </h3>
+            <figure>
+              <img src="image/pro2.png" alt="">
+              <figcaption>
+                2019.04.12<br>
+                카카오페이지 copypage
+              </figcaption>
+            </figure>
+          </li>
+          <li id="pro3">
+            <h3>
+              코딩테스트
+            </h3>
+            <figure>
+              <img src="image/pro3.png" alt="">
+              <figcaption>
+                2019.05.02<br>
+                경기산업기술교육센터 웹콘텐츠디자인 과정 하드코딩 테스트
+              </figcaption>
+            </figure>
+          </li>
+          <li id="pro4">
+            <h3>
+              포토샵 작업물
 
-      </div>
-    </main>
-
-    <section id="portfolio">
-      <h2><span>portfolio</span></h2>
-      <div class="inner_section">
-
-        <article id="project">
-          <div class="inner_project inner inner_box">
-
-            <h2><span>PROJECTS</span></h2>
-            <div id="pro1"></div>
-            <ul>
-              <li>
-                <h3>
-                  원공인중개사 홈페이지 제작
-                  팀프로젝트
-                </h3>
-                <figure>
-                  <img src="image/pro1.png" alt="">
-                  <figcaption>
-                    2019.04.05~2019.05.09<br>
-                    html, CSS, javascript, php, MySQL 활용한 팀프로젝트 작업
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <h3>
-                  카카오 홈페이지
-                  카피페이지
-                </h3>
-                <figure>
-                  <img src="image/pro2.png" alt="">
-                  <figcaption>
-                    2019.04.12<br>
-                    카카오페이지 copypage
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <h3>
-                  코딩테스트
-                </h3>
-                <figure>
-                  <img src="image/pro3.png" alt="">
-                  <figcaption>
-                    2019.05.02<br>
-                    경기산업기술교육센터 웹콘텐츠디자인 과정 하드코딩 테스트
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                <h3>
-                  포토샵 작업물
-
-                </h3>
-                <figure>
-                  <figcaption>
-                    2019.03.02~
-                    디자인 시간 및 외부 홍보 포스터
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-        </article>
-      </div>
-
-      <article id="study">
-        <div class="inner_study inner inner_box">
-
-          <h2><span>STUDY</span></h2>
-          <ul>
-            <li>
-              <ul>
-                <h3>HTML + CSS</h3>
-                <li>교재<figure><img src="" alt=""><figcaption></figcaption></figure></li>
-                <li>실습<figure><img src="" alt=""><figcaption></figcaption></figure></li>
-                <li><a href="./web_study/youtube/RWD/index.html" target="_blank">반응형 레이아웃 연습<figure><img src="./web_study/youtube/RWD/home.png" alt=""><figcaption>2019.04.11. 작성</figcaption></figure></a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <h3>js, jquery</h3>
-                <li>교재<figure><img src="" alt=""><figcaption></figcaption></figure></li>
-                <li>실습<figure><img src="" alt=""><figcaption></figcaption></figure></li>
-                <li><a href="./web_study/javascript/game/index.html" target="_blank">카드뒤집기 게임제작<figure><img src="./web_study/javascript/game/home.png" alt=""><figcaption>2019.03.27. 제작</figcaption></figure></a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li><h3>PHP 프로그래밍</h3><a href="./Presentation/PHP/PHP_programming/index.html" target="_blank">PHP 프로그래밍 기초<figure><img src="./Presentation/PHP/PHP_programming/1.PNG" alt=""><figcaption>2019.04.02. 작성</figcaption></figure></a></li>
-                <li><a href="./Presentation/PHP/PHP_mysql/index.html" target="_blank">MySQL 데이터베이스<figure><img src="./Presentation/PHP/PHP_mysql/1.PNG" alt=""><figcaption>2019.04.13. 작성</figcaption></figure></a></li>
-                <li><h3>기타</h3><a href="./Presentation/GitHub/index.html" target="_blank">GitHub 이해하기<figure><img src="./Presentation/GitHub/1.PNG" alt=""><figcaption>2019.03.28. 작성</figcaption></figure></a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </article>
-
-      <article id="contact">
-        <div class="inner_contact inner inner_box">
-          <h2><span>CONTACT</span></h2>
-          <div class="container">
-            <img src="image/frame.png" alt="QR코드">
-            <p><a aria-label="Email yongseok" href="mailto:yongseok.web@gmail.com">yongseok.web@gmail.com</a></p><br>
-            <p><a aria-label="View yongseok on GitHub" href="http://github.com/yongseok-web" target="_blank"><img src="image/github.png" alt="GitHub"></a>
-            <a aria-label="View yongseok on KAKAO" href="https://open.kakao.com/o/sYksMHnb" target="_blank"><img src="image/kakao.png" alt="카카오톡"></a></p>
-          </div>
-      </article>
+            </h3>
+            <figure>
+              <figcaption>
+                2019.03.02~
+                디자인 시간 및 외부 홍보 포스터
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+    </article>
+    <span id="study_i">.</span>
   </div>
-  </section>
-  <footer>
-    <div class="inner_footer inner">
-      <div>COPYRIGHT © 2019 yongseok.web ALL RIGHTS RESERVED.</div>
+<!-- PROJECT -->
+
+<article id="study">
+  <div class="inner_study inner inner_box">
+
+    <h2><span>STUDY</span></h2>
+    <ul>
+      <li id="stu1">
+        <ul>
+          <h3>HTML + CSS</h3>
+          <li>교재<figure><img src="" alt=""><figcaption></figcaption></figure></li>
+          <li>실습<figure><img src="" alt=""><figcaption></figcaption></figure></li>
+          <li><a href="./web_study/youtube/RWD/index.html" target="_blank">반응형 레이아웃 연습<figure><img src="./web_study/youtube/RWD/home.png" alt=""><figcaption>2019.04.11. 작성</figcaption></figure></a></li>
+        </ul>
+      </li>
+      <li id="stu2">
+        <ul>
+          <h3>js, jquery</h3>
+          <li>교재<figure><img src="" alt=""><figcaption></figcaption></figure></li>
+          <li>실습<figure><img src="" alt=""><figcaption></figcaption></figure></li>
+          <li><a href="./web_study/javascript/game/index.html" target="_blank">카드뒤집기 게임제작<figure><img src="./web_study/javascript/game/home.png" alt=""><figcaption>2019.03.27. 제작</figcaption></figure></a></li>
+        </ul>
+      </li>
+      <li id="stu3">
+        <ul>
+          <li><h3>PHP 프로그래밍</h3><a href="./Presentation/PHP/PHP_programming/index.html" target="_blank">PHP 프로그래밍 기초<figure><img src="./Presentation/PHP/PHP_programming/1.PNG" alt=""><figcaption>2019.04.02. 작성</figcaption></figure></a></li>
+          <li><a href="./Presentation/PHP/PHP_mysql/index.html" target="_blank">MySQL 데이터베이스<figure><img src="./Presentation/PHP/PHP_mysql/1.PNG" alt=""><figcaption>2019.04.13. 작성</figcaption></figure></a></li>
+          <li><h3>기타</h3><a href="./Presentation/GitHub/index.html" target="_blank">GitHub 이해하기<figure><img src="./Presentation/GitHub/1.PNG" alt=""><figcaption>2019.03.28. 작성</figcaption></figure></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <span id="contact_i">.</span>
+</article>
+<!-- STUDY -->
+<article id="contact">
+  <div class="inner_contact inner inner_box">
+    <h2><span>CONTACT</span></h2>
+    <div class="container">
+      <img src="image/frame.png" alt="QR코드">
+      <p><a aria-label="Email yongseok" href="mailto:yongseok.web@gmail.com">yongseok.web@gmail.com</a></p><br>
+      <p><a aria-label="View yongseok on GitHub" href="http://github.com/yongseok-web" target="_blank"><img src="image/github.png" alt="GitHub"></a>
+      <a aria-label="View yongseok on KAKAO" href="https://open.kakao.com/o/sYksMHnb" target="_blank"><img src="image/kakao.png" alt="카카오톡"></a></p>
     </div>
-  </footer>
-  </div>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var bt = document.getElementsByClassName('bt');
-      var sub_bt = document.getElementsByClassName('sub_bt');
-      var position;
+</article>
+</div>
+<!-- CONTACT -->
 
-      $(bt[0]).click(function() {
-        count = 0;
-        wheel_count();
-      });
-      $(bt[1]).click(function() {
-        count = 1;
-        wheel_count();
-      });
-      $(bt[2]).click(function() {
-        count = 2;
-        wheel_count();
-      });
-      $(bt[3]).click(function() {
-        count = 3;
-        wheel_count();
-      });
-      $(bt[4]).click(function() {
-        count = 4;
-        wheel_count();
-      });
+<footer>
+<div class="inner_footer inner">
+<div>COPYRIGHT © 2019 yongseok.web ALL RIGHTS RESERVED.</div>
+</div>
+</footer>
+<!-- footer -->
+<div id="bt_top"><h3>Top</h3></div>
 
-      $(sub_bt[0]).click(function() {
-        count = 0;
-        wheel_count();
-      });
-      $(sub_bt[1]).click(function() {
-        count = 1;
-        wheel_count();
-      });
-      $(sub_bt[2]).click(function() {
-        count = 2;
-        wheel_count();
-      });
-      $(sub_bt[3]).click(function() {
-        count = 3;
-        wheel_count();
-      });
-      $(sub_bt[4]).click(function() {
-        count = 4;
-        wheel_count();
-      });
+    </div>
+<script type="text/javascript">
+window.onscroll = function() {scrollFunction_nav();scrollFunction();};
+        function scrollFunction_nav() {
+       if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+         $('nav a').css('color', '#000');
+         $('#bt_top').css('display',"block")
+       } else {
+         $('nav a').css('color', 'auto');
+         $('#bt_top').css('display',"none")
+       }}
+         $('#bt_top').click(function () {
+       document.body.scrollTop = 0;
+       document.documentElement.scrollTop = 0;
+     })
 
-      var div_h = 0;
-      var count = 0;
-      var scrollEvent = false;
-      var wheel_data;
+     $(document).ready(function() {
 
-      $("html").on('mousewheel', function(c) {
-        wheel_data = c.originalEvent.wheelDelta;
-        // console.log(wheel_data);
-        wheel_data = c.originalEvent.wheelDelta;
-        if (wheel_data > 0 && count > 0 && scrollEvent == false) {
-          c.preventDefault();
-          scrollEvent = true;
-          count--;
-          wheel_count();
-          setTimeout(function() {
-            scrollEvent = false;
-          }, 010);
-        } else if (wheel_data < 0 && count < 4 && scrollEvent == false) {
-          c.preventDefault();
-          scrollEvent = true;
-          count++;
-          wheel_count();
-          setTimeout(function() {
-            scrollEvent = false;
-          }, 010);
-        }
-      });
+     var html = '';
+     for (var i = 1; i <= 50; i ++) {
+         html += '<div class="shape-container--'+i+' shape-animation"><div class="random-shape"></div></div>';
+     }
 
-      $(sub_bt[0]).css("background-color", "#238db5");
-      position = $("header").offset();
-      $("html").animate({scrollTop: position.top}, 500);
-      $("nav").css("opacity","0");
+     document.querySelector('.shape').innerHTML += html;
 
-      function wheel_count() {
-        $(sub_bt[0]).css("background-color", "#fff");
-        $(sub_bt[1]).css("background-color", "#fff");
-        $(sub_bt[2]).css("background-color", "#fff");
-        $(sub_bt[3]).css("background-color", "#fff");
-        $(sub_bt[4]).css("background-color", "#fff");
-        $(bt[1]).css("background-color", "#238db5");
-        $(bt[2]).css("background-color", "#238db5");
-        $(bt[3]).css("background-color", "#238db5");
-        $(bt[4]).css("background-color", "#238db5");
-        $(bt[0]).css("background-color", "#238db5");
-        $(bt[1]).css("color", "#fff");
-        $(bt[2]).css("color", "#fff");
-        $(bt[3]).css("color", "#fff");
-        $(bt[4]).css("color", "#fff");
-        $(bt[0]).css("color", "#fff");
-        $("nav").css("opacity","1");
+     var $allShapes = $("[class*='shape-container--']");
+     $('.button').click(function (event) {
+         $allShapes.toggleClass("stop-shape");
+         var $this = $(this);
+         $this.toggleClass('.button');
+         if($this.hasClass('.button')){
+             $this.text('Unfreeze shapes');
+         } else {
+             $this.text('Freeze shapes');
+         }
+         event.preventDefault();
+     });
 
-        if (count == 0) {
-          function(){location.href = '#header';};
-          $(sub_bt[0]).css("background-color", "#238db5");
-          $(bt[0]).css("background-color", "#fff");
-          $("nav").css("opacity","0")
-
-        } else if (count == 1) {
-          function(){location.href = '#main';};
-          $(sub_bt[1]).css("background-color", "#238db5");
-          $(bt[1]).css("background-color", "#fff");
-        } else if (count == 2) {
-          function(){location.href = '#portfolio';};
-          $(sub_bt[2]).css("background-color", "#238db5");
-          $(bt[2]).css("background-color", "#fff");
-
-        } else if (count == 3) {
-          function(){location.href = '#study';};
-          $(sub_bt[3]).css("background-color", "#238db5");
-          $(bt[3]).css("background-color", "#fff");
-
-        } else if (count == 4) {
-          function(){location.href = '#content';};
-          $(sub_bt[4]).css("background-color", "#238db5");
-          $(bt[4]).css("background-color", "#fff");
-        }
-
-
-      }
-    });
-  </script>
+     });
+</script>
 </body>
 
 </html>

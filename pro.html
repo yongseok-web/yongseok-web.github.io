@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style media="screen">
+body{
+	width: 100%;
+	height: 100vh;
+	background: #1f2029;
+	overflow: hidden;
+}
+
+/* #Cursor
+================================================== */
+.cursor,
+.cursor2,
+.cursor3{
+	position: fixed;
+	border-radius: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%;
+	mix-blend-mode: difference;
+}
+.cursor{
+	background-color: #fff;
+	height: 0;
+	width: 0;
+	z-index: 99999;
+}
+.cursor2,.cursor3{
+	height: 36px;
+	width: 36px;
+	z-index:99998;
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out
+}
+.cursor2.hover,
+.cursor3.hover{
+	-webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+	transform:scale(2) translateX(-25%) translateY(-25%);
+	border:none
+}
+.cursor2{
+	border: 2px solid #fff;
+	box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+.cursor2.hover{
+	background: rgba(255,255,255,1);
+	box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
+}
+
+/* #Slider
+================================================== */
+
+.section{
+	position: relative;
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	height: 100vh;
+}
+
+/* Case Study Showcase
+================================================== */
+
+.case-study-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	width: auto;
+	margin: 0;
+	padding: 0;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	list-style: none;
+}
+.case-study-wrapper .case-study-name {
+	margin: 0 auto;
+	text-align: center;
+}
+.case-study-wrapper .case-study-name a {
+	position: relative;
+	list-style: none;
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 8vh;
+	font-weight: 800;
+	line-height: 1.15;
+	letter-spacing: 3px;
+	color: #4a4a52;
+	text-decoration: none;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+	text-decoration: none;
+}
+.case-study-wrapper .case-study-name a:hover {
+	text-decoration: none;
+}
+.case-study-wrapper .case-study-name.active a {
+	color: #fff;
+}
+.case-study-wrapper .case-study-name a:before {
+	position: absolute;
+	content: '';
+	left: 50%;
+	bottom: 0;
+	height: 6px;
+	width: 0;
+	transform: translateX(-50%);
+	background: linear-gradient(45deg, #f19872, #e86c9a);
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+.case-study-wrapper .case-study-name:nth-child(2) a:before {
+	background: linear-gradient(45deg, #0947db, #07d89d);
+}
+.case-study-wrapper .case-study-name:nth-child(3) a:before {
+	background: linear-gradient(45deg, #ee2d29, #f8ae2c);
+}
+.case-study-wrapper .case-study-name:nth-child(4) a:before {
+	background: linear-gradient(45deg, #3a3d98, #6f22b9);
+}
+.case-study-wrapper .case-study-name.active a:before {
+	width: 100%;
+}
+.case-study-images {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin:0;
+	z-index:2;
+}
+.case-study-images li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	list-style:none;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.case-study-images li .img-hero-background{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	list-style:none;
+	opacity: 0;
+	-webkit-transform: translateY(60px);
+	transform: translateY(60px);
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.case-study-images li.show .img-hero-background {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+.case-study-images li .hero-number-back{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	display: block;
+	list-style:none;
+	opacity: 0;
+	font-size: 20vw;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	line-height: 1;
+	color: transparent;
+	-webkit-text-stroke: 4px rgba(0,0,0,.7);
+	z-index: 1;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.case-study-images li .hero-number{
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	width: 40px;
+	margin-left: -70px;
+	display: block;
+	letter-spacing: 2px;
+	text-align: center;
+	list-style:none;
+	opacity: 0;
+	font-size: 13px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	line-height: 1;
+	color: #fff;
+	z-index: 6;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.case-study-images li .hero-number-fixed{
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	margin-left: 30px;
+	width: 40px;
+	text-align: center;
+	display: block;
+	letter-spacing: 2px;
+	list-style:none;
+	font-size: 13px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	line-height: 1;
+	color: #fff;
+	z-index: 6;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.case-study-images li .hero-number-fixed:before{
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: -60px;
+	width: 60px;
+	height: 1px;
+	z-index: 1;
+	background-color: rgba(255,255,255,.4);
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.case-study-images li.show .hero-number {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+.case-study-images li.show .hero-number-back {
+	opacity: 1;
+}
+.case-study-images li .img-hero-background span img{
+	width: 100%;
+	height: auto;
+	display: block;
+	transform: scale(0.6, 1.7);
+	transform-origin: center top;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.case-study-images li.show .img-hero-background span img{
+	transform: scale(1);
+}
+.case-study-images li:nth-child(1) .img-hero-background span{
+	position: absolute;
+	width: 15%;
+	top: 12%;
+	left: 25%;
+	display: block;
+}
+.case-study-images li:nth-child(1) .img-hero-background span:nth-child(2){
+	width: 18%;
+	top: 22%;
+	left: 55%;
+}
+.case-study-images li:nth-child(1) .img-hero-background span:nth-child(3){
+	width: 13%;
+	top: 55%;
+	left: 75%;
+}
+.case-study-images li:nth-child(1) .img-hero-background span:nth-child(4){
+	width: 11%;
+	top: 44%;
+	left: 15%;
+}
+.case-study-images li:nth-child(2) .img-hero-background span{
+	position: absolute;
+	width: 13%;
+	top: 7%;
+	left: 15%;
+	display: block;
+}
+.case-study-images li:nth-child(2) .img-hero-background span:nth-child(2){
+	width: 14%;
+	top: 55%;
+	left: 29%;
+}
+.case-study-images li:nth-child(2) .img-hero-background span:nth-child(3){
+	width: 11%;
+	top: 17%;
+	left: 72%;
+}
+.case-study-images li:nth-child(2) .img-hero-background span:nth-child(4){
+	width: 13%;
+	top: 54%;
+	left: 67%;
+}
+.case-study-images li:nth-child(3) .img-hero-background span{
+	position: absolute;
+	width: 11%;
+	top: 9%;
+	left: 18%;
+	display: block;
+}
+.case-study-images li:nth-child(3) .img-hero-background span:nth-child(2){
+	width: 11%;
+	top: 55%;
+	left: 29%;
+}
+.case-study-images li:nth-child(3) .img-hero-background span:nth-child(3){
+	width: 12%;
+	top: 11%;
+	left: 62%;
+}
+.case-study-images li:nth-child(3) .img-hero-background span:nth-child(4){
+	width: 9%;
+	top: 54%;
+	left: 75%;
+}
+.case-study-images li:nth-child(4) .img-hero-background span{
+	position: absolute;
+	width: 15%;
+	top: 12%;
+	left: 25%;
+	display: block;
+}
+.case-study-images li:nth-child(4) .img-hero-background span:nth-child(2){
+	width: 12%;
+	top: 22%;
+	left: 55%;
+}
+.case-study-images li:nth-child(4) .img-hero-background span:nth-child(3){
+	width: 13%;
+	top: 58%;
+	left: 75%;
+}
+.case-study-images li:nth-child(4) .img-hero-background span:nth-child(4){
+	width: 11%;
+	top: 59%;
+	left: 20%;
+}
+
+/* #Media
+================================================== */
+
+@media (max-width: 991px) {
+	.case-study-images li .hero-number-back{
+		font-size: 26vw;
+	}
+}
+
+@media (max-width: 767px) {
+	.case-study-wrapper .case-study-name a {
+		font-size: 26px;
+		letter-spacing: 1px;
+	}
+	.case-study-images li .hero-number-back{
+		font-size: 32vw;
+	}
+}
+
+@media (max-width: 580px) {
+	.case-study-images li:nth-child(1) .img-hero-background span,
+	.case-study-images li:nth-child(2) .img-hero-background span,
+	.case-study-images li:nth-child(3) .img-hero-background span,
+	.case-study-images li:nth-child(4) .img-hero-background span{
+		width: calc(100% - 40px);
+		top: 50%;
+		left: 20px;
+		transform: translateY(-50%);
+	}
+	.case-study-images li:nth-child(1) .img-hero-background span:nth-child(2),
+	.case-study-images li:nth-child(1) .img-hero-background span:nth-child(3),
+	.case-study-images li:nth-child(1) .img-hero-background span:nth-child(4),
+	.case-study-images li:nth-child(2) .img-hero-background span:nth-child(2),
+	.case-study-images li:nth-child(2) .img-hero-background span:nth-child(3),
+	.case-study-images li:nth-child(2) .img-hero-background span:nth-child(4),
+	.case-study-images li:nth-child(3) .img-hero-background span:nth-child(2),
+	.case-study-images li:nth-child(3) .img-hero-background span:nth-child(3),
+	.case-study-images li:nth-child(3) .img-hero-background span:nth-child(4),
+	.case-study-images li:nth-child(4) .img-hero-background span:nth-child(2),
+	.case-study-images li:nth-child(4) .img-hero-background span:nth-child(3),
+	.case-study-images li:nth-child(4) .img-hero-background span:nth-child(4){
+		display: none;
+	}
+}
+.switch-wrap {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 1000;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+#switch,
+#circle {
+	cursor: pointer;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+#switch {
+	width: 70px;
+	height: 8px;
+	margin: 0 auto;
+	text-align: center;
+	border: 2px solid #000;
+	border-radius: 27px;
+	background: #8167a9;
+	position: relative;
+	display: inline-block;
+}
+#circle {
+	position: absolute;
+	top: -11px;
+	left: 0;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
+	background: #fff;
+}
+.switched {
+	border-color: #8167a9 !important;
+	background: #000 !important;
+}
+.switched #circle {
+	left: 44px;
+	background: #000;
+}
+
+
+body.light{
+	background: #f2f5f5;
+}
+body.light .cursor{
+	mix-blend-mode: normal;
+}
+body.light .cursor2{
+	border: 2px solid #000;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+	mix-blend-mode: normal;
+}
+body.light .cursor2.hover{
+	background: rgba(0,0,0,.15);
+	box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
+	border-color: transparent;
+	mix-blend-mode: normal;
+}
+body.light .case-study-images li .hero-number-back{
+	-webkit-text-stroke: 4px #ccc;
+}
+body.light .case-study-images li .hero-number{
+	color: #212121;
+}
+body.light .case-study-images li .hero-number-fixed{
+	color: #212121;
+}
+body.light .case-study-images li .hero-number-fixed:before{
+	background-color: rgba(0,0,0,.4);
+}
+body.light .case-study-wrapper .case-study-name a {
+	color: #777777;
+}
+body.light .case-study-wrapper .case-study-name.active a {
+	color: #000;
+}
+/* #Link to page
+================================================== */
+
+.link-to-portfolio {
+	position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 100;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('https://ivang-design.com/ig-logo.jpg');
+    box-shadow: 0 0 0 2px rgba(255,255,255,.3);
+    transition: opacity .2s, border-radius .2s, box-shadow .2s;
+    transition-timing-function: ease-out;
+}
+.link-to-portfolio:hover {
+    opacity: 0.8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0);
+}
+</style>
+</head>
+<body>
+  <div class="switch-wrap">
+    <div id="switch" class="hover-target">
+      <div id="circle"></div>
+    </div>
+  </div>
+
+  <!-- Page cursor
+  ================================================== -->
+
+      <div class='cursor' id="cursor"></div>
+      <div class='cursor2' id="cursor2"></div>
+      <div class='cursor3' id="cursor3"></div>
+
+  <div class="section">
+    <ul class="case-study-wrapper">
+      <li class="case-study-name">
+        <a href="#" class="hover-target">원공인중개사사무소</a>
+      </li>
+      <li class="case-study-name">
+        <a href="#" class="hover-target">타히티아트 미술학원</a>
+      </li>
+      <li class="case-study-name">
+        <a href="#" class="hover-target">생산관리 프로그램</a>
+      </li>
+      <li class="case-study-name">
+        <a href="#" class="hover-target">카피페이지</a>
+      </li>
+    </ul>
+    <ul class="case-study-images">
+      <li>
+        <div class="img-hero-background">
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/1.jpg" alt="">
+          </span>
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/2.jpg" alt="">
+          </span>
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/3.jpg" alt="">
+          </span>
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/4.jpg" alt="">
+          </span>
+        </div>
+        <div class="hero-number-back">01</div>
+        <div class="hero-number">01</div>
+        <div class="hero-number-fixed">04</div>
+      </li>
+      <li>
+        <div class="img-hero-background">
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/5.jpg" alt="">
+          </span>
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/6.jpg" alt="">
+          </span>
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/7.jpg" alt="">
+          </span>
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/8.jpg" alt="">
+          </span>
+        </div>
+        <div class="hero-number-back">02</div>
+        <div class="hero-number">02</div>
+      </li>
+      <li>
+        <div class="img-hero-background">
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/9.jpg" alt="">
+          </span>
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/10.jpg" alt="">
+          </span>
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/11.jpg" alt="">
+          </span>
+          <span>
+            <img src="https://ivang-design.com/svg-load/slider/12.jpg" alt="">
+          </span>
+        </div>
+        <div class="hero-number-back">03</div>
+        <div class="hero-number">03</div>
+      </li>
+      <li>
+        <div class="안녕하세요">
+          <span>
+            안녕하세요
+          </span>
+          <span>
+          안녕하세요
+          </span>
+          <span>
+            안녕하세요
+          </span>
+          <span>
+            안녕하세요
+          </span>
+        </div>
+        <div class="hero-number-back">04</div>
+        <div class="hero-number">04</div>
+      </li>
+    </ul>
+  </div>
+
+<script type="text/javascript">
+
+
+/* Please ❤ this if you like it! */
+
+
+(function($) { "use strict";
+
+	//Page cursors
+
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+        t.style.left = n.clientX + "px",
+		t.style.top = n.clientY + "px",
+		e.style.left = n.clientX + "px",
+		e.style.top = n.clientY + "px",
+		i.style.left = n.clientX + "px",
+		i.style.top = n.clientY + "px"
+    });
+    var t = document.getElementById("cursor"),
+        e = document.getElementById("cursor2"),
+        i = document.getElementById("cursor3");
+    function n(t) {
+        e.classList.add("hover"), i.classList.add("hover")
+    }
+    function s(t) {
+        e.classList.remove("hover"), i.classList.remove("hover")
+    }
+    s();
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+        o(r[a])
+    }
+    function o(t) {
+        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+    }
+
+	$(document).ready(function() {
+
+		/* Hero Case study images */
+
+		$('.case-study-name:nth-child(1)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(1)').addClass("show");
+			$('.case-study-name:nth-child(1)').addClass('active');
+		})
+		$('.case-study-name:nth-child(2)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(2)').addClass("show");
+			$('.case-study-name:nth-child(2)').addClass('active');
+		})
+		$('.case-study-name:nth-child(3)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(3)').addClass("show");
+			$('.case-study-name:nth-child(3)').addClass('active');
+		})
+		$('.case-study-name:nth-child(4)').on('mouseenter', function() {
+			$('.case-study-name.active').removeClass('active');
+			$('.case-study-images li.show').removeClass("show");
+			$('.case-study-images li:nth-child(4)').addClass("show");
+			$('.case-study-name:nth-child(4)').addClass('active');
+		})
+		$('.case-study-name:nth-child(1)').trigger('mouseenter')
+   });
+
+
+	//Switch dark/light
+
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("light")) {
+			$("body").removeClass("light");
+			$("#switch").removeClass("switched");
+		}
+		else {
+			$("body").addClass("light");
+			$("#switch").addClass("switched");
+		}
+	});
+
+
+  })(jQuery);
+</script>
+</body>
+</html>
