@@ -33,13 +33,14 @@
   <link rel="stylesheet" href="css/back_style.css">
   <link rel="stylesheet" href="css/pro_style.css">
   <style media="screen">
-body{background: url(image/bg.png)}
+body{background: url(https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-1853305_960_720.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 * {font-family: 'Noto Sans KR', sans-serif;margin: 0;padding: 0;}
 #wrap{width: 100%;font-family: 'Noto Sans KR'}
-.inner{width: 990px;margin: 0 auto;padding-top: 2%;padding-bottom: 4%;}
+
+.inner{width: 990px;margin: 0 auto;padding-top: 2%;padding-bottom: 4%;position: relative;}
 .inner a{color:#efefef}
 .inner_box{
-height:600px;margin: 10vh auto;background-color: #111;
+height:600px;margin: 8vh auto;background-color: #111;
 -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);}
@@ -57,7 +58,7 @@ nav ul h2 {font-size: 0;}
 main li{display: inline-block;}
 /* project end*/
 
-#project .inner {background-color: #000;position: relative;}
+#project .inner {}
 #project h2 {}
 .none{display: none;}
 #pro_con h3{;font-size: 20px;}
@@ -82,10 +83,11 @@ main li{display: inline-block;}
 
 section #contact{height: 100vh;}
 #contact .container{text-align: center; padding: 0;margin-top: 2%;}
-#contact a img{border-radius: 10px;}
+#contact a img{border-radius: 10px;padding: 2px 5px;}
 /* contact end */
 
-footer{border-top: 1px solid #ccc;background-color: #eeeeee;}
+footer{position: fixed;left: 00%;top: 65%;width: 100%;z-index: 50;transform: translate(-510px);}
+footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0;transform: rotateZ(270deg);}
 /* footer end */
 
 #bt_top{cursor: pointer;border-radius: 15px;width: 40px;height: 40px;background-repeat: no-repeat;position: fixed;top: 90vh;right: 25px;display: none;background-color: #fff;}
@@ -96,12 +98,12 @@ footer{border-top: 1px solid #ccc;background-color: #eeeeee;}
 <body>
     <span id="header_i">.</span>
     <div class='box'>
-      <div class='wave -one'></div>
-      <div class='wave -two'></div>
-      <div class='wave -three'></div>
-      <img src="image/logo.png" alt="로고">
+    <div class='wave -one'></div>
+    <div class='wave -two'></div>
+    <div class='wave -three'></div>
+    <img src="image/logo.png" alt="로고">
+      </div>
 
-    </div>
     <div id="wrap">
       <nav>
         <ul><h2>목차</h2>
