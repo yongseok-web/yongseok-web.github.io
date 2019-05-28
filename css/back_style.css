@@ -17,13 +17,13 @@
   width: 500px;
 }
 .wave {
-  opacity: .4;
+  opacity: 1;
   position: absolute;
   top: 3%;
   left: 50%;
-  background: #0af;
+  background: #ffffff;
   width: 500px;
-  height: 500px;
+  height: 480px;
   margin-left: -250px;
   margin-top: 50px;
   transform-origin: 50% 48%;
@@ -36,9 +36,9 @@
 }
 
 .wave.-two {
-  animation: drift 7000ms infinite linear;
-  opacity: .1;
-  background: rgb(0, 34, 223);
+  animation: drift 10000ms infinite linear;
+  opacity: 1;
+  background: rgb(255, 255, 255);
 }
 
 .box:after {
