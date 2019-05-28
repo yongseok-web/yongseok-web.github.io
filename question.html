@@ -4,17 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>question</title>
+  <title>Question</title>
   <style media="screen">
     *{margin: 0;padding: 0;font-size: 0;}
-    .mo{background: #eea1f0;width: 16.5%;height: 50px;display: inline-block;margin: 0;}
-    #center{position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%)}
-    input{font-size: 15px;}
+    .mo{background: #eea1f0;width: 45px;height: 45px;display: inline-block;margin: 0;}
+    #center{width: 270px;position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%)}
   </style>
 </head>
 <body>
   <div id="center">
-
   <div>
     <div class="mo" id="bt00"></div>
     <div class="mo" id="bt01"></div>
@@ -65,83 +63,99 @@
   </div>
 </div>
 <script type="text/javascript">
-  var ques=
-  [
-  ['내가 알려줄 수 있는 (소소한)노하우'
-  ,'여행에서 중요하게 생각하는 것은?'
-  ,'배우고 싶은 것은?'
-  ,'당신의 청소년 시절을 들려주세요'
-  ,'다음 생에 이성으로 태어난다면?'
-  ,'가장 자신있는 외모는?'],
-  ['심심하고 무료할 때 무엇을 하나요?'
-  ,'지금 생각나는 사람은? 이유는?'
-  ,'당신이 자발적으로 하는 활동은?(시간과 돈, 열정을 쏟으면서)'
-  ,'살면서 가장 만족을 느낀 경험은 무엇인가요?'
-  ,'하는 일의 어떤 점에서 만족감을 느끼나?'
-  ,'구청장, 시장이 된다면?'],
-  ['인생에서 중요하게 생각하는 가치는?'
-  ,'지난 일주일간 내가 한 착한 일은?'
-  ,'어떤 사람으로 기억되고 싶은가요?'
-  ,'자기 자랑 3가지(거만하게)'
-  ,'내가 나이 들었다고 느낄 때?'
-  ,'무인도에 가져갈 3가지는?'],
-  ['존경하는 사람은?(롤모델) 그 이유는?'
-  ,'자유질문 1개 받기'
-  ,'아직 시도하지 않았지만 이루고 싶은 꿈은?'
-  ,'지금 살고 있는 곳의 즐거움은?'
-  ,'자신의 장점과 단점을 아는대로'
-  ,'건강한 지구를 위해 당신이 실천하는 것은?'],
-  ['당장 여행하고 싶은곳? 이유는?'
-  ,'돈, 시간을 생각하지 않아도 된다면 하고 싶은 일은?'
-  ,'슬럼프를 극복하는 당신의 방법은?'
-  ,'지금 하는 일을 시작하게 된 이유는?'
-  ,'당신의 추천리스트!(영화, 드라마, 책, 연극, 맛집...)'
-  ,'당신이 자주 칭찬받는 이유는?'],
-  ['언제 행복한가요?'
-  ,'인생이 3년 남았다면 어떻게 살고 싶나요?'
-  ,'요즘 오랜 시간 고민하는 것은?'
-  ,'인생에서 가장 힘들었던 경험은? 극복한 방법은?'
-  ,'나의 삶은 ___이다'
-  ,'당신에게 힘을 주는 말은?']];
-
-  document.getElementById('bt00').onclick = function() { alert(ques[0][0]); this.style.background = "#fff"};
-  document.getElementById('bt01').onclick = function() { alert(ques[0][1]); this.style.background = "#fff"};
-  document.getElementById('bt02').onclick = function() { alert(ques[0][2]); this.style.background = "#fff"};
-  document.getElementById('bt03').onclick = function() { alert(ques[0][3]); this.style.background = "#fff"};
-  document.getElementById('bt04').onclick = function() { alert(ques[0][4]); this.style.background = "#fff"};
-  document.getElementById('bt05').onclick = function() { alert(ques[0][5]); this.style.background = "#fff"};
-  document.getElementById('bt10').onclick = function() { alert(ques[1][0]); this.style.background = "#fff"};
-  document.getElementById('bt11').onclick = function() { alert(ques[1][1]); this.style.background = "#fff"};
-  document.getElementById('bt12').onclick = function() { alert(ques[1][2]); this.style.background = "#fff"};
-  document.getElementById('bt13').onclick = function() { alert(ques[1][3]); this.style.background = "#fff"};
-  document.getElementById('bt14').onclick = function() { alert(ques[1][4]); this.style.background = "#fff"};
-  document.getElementById('bt15').onclick = function() { alert(ques[1][5]); this.style.background = "#fff"};
-  document.getElementById('bt20').onclick = function() { alert(ques[2][0]); this.style.background = "#fff"};
-  document.getElementById('bt21').onclick = function() { alert(ques[2][1]); this.style.background = "#fff"};
-  document.getElementById('bt22').onclick = function() { alert(ques[2][2]); this.style.background = "#fff"};
-  document.getElementById('bt23').onclick = function() { alert(ques[2][3]); this.style.background = "#fff"};
-  document.getElementById('bt24').onclick = function() { alert(ques[2][4]); this.style.background = "#fff"};
-  document.getElementById('bt25').onclick = function() { alert(ques[2][5]); this.style.background = "#fff"};
-  document.getElementById('bt30').onclick = function() { alert(ques[3][0]); this.style.background = "#fff"};
-  document.getElementById('bt31').onclick = function() { alert(ques[3][1]); this.style.background = "#fff"};
-  document.getElementById('bt32').onclick = function() { alert(ques[3][2]); this.style.background = "#fff"};
-  document.getElementById('bt33').onclick = function() { alert(ques[3][3]); this.style.background = "#fff"};
-  document.getElementById('bt34').onclick = function() { alert(ques[3][4]); this.style.background = "#fff"};
-  document.getElementById('bt35').onclick = function() { alert(ques[3][5]); this.style.background = "#fff"};
-  document.getElementById('bt40').onclick = function() { alert(ques[4][0]); this.style.background = "#fff"};
-  document.getElementById('bt41').onclick = function() { alert(ques[4][1]); this.style.background = "#fff"};
-  document.getElementById('bt42').onclick = function() { alert(ques[4][2]); this.style.background = "#fff"};
-  document.getElementById('bt43').onclick = function() { alert(ques[4][3]); this.style.background = "#fff"};
-  document.getElementById('bt44').onclick = function() { alert(ques[4][4]); this.style.background = "#fff"};
-  document.getElementById('bt45').onclick = function() { alert(ques[4][5]); this.style.background = "#fff"};
-  document.getElementById('bt50').onclick = function() { alert(ques[5][0]); this.style.background = "#fff"};
-  document.getElementById('bt51').onclick = function() { alert(ques[5][1]); this.style.background = "#fff"};
-  document.getElementById('bt52').onclick = function() { alert(ques[5][2]); this.style.background = "#fff"};
-  document.getElementById('bt53').onclick = function() { alert(ques[5][3]); this.style.background = "#fff"};
-  document.getElementById('bt54').onclick = function() { alert(ques[5][4]); this.style.background = "#fff"};
-  document.getElementById('bt55').onclick = function() { alert(ques[5][5]); this.style.background = "#fff"};
 
 
+    var z0;
+    var z1;
+    var z2;
+    var z3;
+    var z4;
+    var z5;
+
+    while (Math.pow(10, z0)+Math.pow(10, z1)+Math.pow(10, z2)+Math.pow(10, z3)+Math.pow(10, z4)+Math.pow(10, z5)!=111111) {
+        var z0 = (Math.floor(Math.random() * (6)) + 0);
+        var z1 = (Math.floor(Math.random() * (6)) + 0);
+        var z2 = (Math.floor(Math.random() * (6)) + 0);
+        var z3 = (Math.floor(Math.random() * (6)) + 0);
+        var z4 = (Math.floor(Math.random() * (6)) + 0);
+        var z5 = (Math.floor(Math.random() * (6)) + 0);
+        }
+
+  var ques=  [
+      ['내가 알려줄 수 있는 (소소한)노하우'
+      ,'여행에서 중요하게 생각하는 것은?'
+      ,'배우고 싶은 것은?'
+      ,'당신의 청소년 시절을 들려주세요'
+      ,'다음 생에 이성으로 태어난다면?'
+      ,'가장 자신있는 외모는?'],
+      ['심심하고 무료할 때 무엇을 하나요?'
+      ,'지금 생각나는 사람은? 이유는?'
+      ,'당신이 자발적으로 하는 활동은?(시간과 돈, 열정을 쏟으면서)'
+      ,'살면서 가장 만족을 느낀 경험은 무엇인가요?'
+      ,'하는 일의 어떤 점에서 만족감을 느끼나?'
+      ,'구청장, 시장이 된다면?'],
+      ['인생에서 중요하게 생각하는 가치는?'
+      ,'지난 일주일간 내가 한 착한 일은?'
+      ,'어떤 사람으로 기억되고 싶은가요?'
+      ,'자기 자랑 3가지(거만하게)'
+      ,'내가 나이 들었다고 느낄 때?'
+      ,'무인도에 가져갈 3가지는?'],
+      ['존경하는 사람은?(롤모델) 그 이유는?'
+      ,'자유질문 1개 받기'
+      ,'아직 시도하지 않았지만 이루고 싶은 꿈은?'
+      ,'지금 살고 있는 곳의 즐거움은?'
+      ,'자신의 장점과 단점을 아는대로'
+      ,'건강한 지구를 위해 당신이 실천하는 것은?'],
+      ['당장 여행하고 싶은곳? 이유는?'
+      ,'돈, 시간을 생각하지 않아도 된다면 하고 싶은 일은?'
+      ,'슬럼프를 극복하는 당신의 방법은?'
+      ,'지금 하는 일을 시작하게 된 이유는?'
+      ,'당신의 추천리스트!(영화, 드라마, 책, 연극, 맛집...)'
+      ,'당신이 자주 칭찬받는 이유는?'],
+      ['언제 행복한가요?'
+      ,'인생이 3년 남았다면 어떻게 살고 싶나요?'
+      ,'요즘 오랜 시간 고민하는 것은?'
+      ,'인생에서 가장 힘들었던 경험은? 극복한 방법은?'
+      ,'나의 삶은 ___이다'
+      ,'당신에게 힘을 주는 말은?']
+  ];
+
+  document.getElementById('bt00').onclick = function() { alert(ques[z0][z0]); this.style.background = "#fff"};
+  document.getElementById('bt01').onclick = function() { alert(ques[z0][z1]); this.style.background = "#fff"};
+  document.getElementById('bt02').onclick = function() { alert(ques[z0][z2]); this.style.background = "#fff"};
+  document.getElementById('bt03').onclick = function() { alert(ques[z0][z3]); this.style.background = "#fff"};
+  document.getElementById('bt04').onclick = function() { alert(ques[z0][z4]); this.style.background = "#fff"};
+  document.getElementById('bt05').onclick = function() { alert(ques[z0][z5]); this.style.background = "#fff"};
+  document.getElementById('bt10').onclick = function() { alert(ques[z1][z0]); this.style.background = "#fff"};
+  document.getElementById('bt11').onclick = function() { alert(ques[z1][z1]); this.style.background = "#fff"};
+  document.getElementById('bt12').onclick = function() { alert(ques[z1][z2]); this.style.background = "#fff"};
+  document.getElementById('bt13').onclick = function() { alert(ques[z1][z3]); this.style.background = "#fff"};
+  document.getElementById('bt14').onclick = function() { alert(ques[z1][z4]); this.style.background = "#fff"};
+  document.getElementById('bt15').onclick = function() { alert(ques[z1][z5]); this.style.background = "#fff"};
+  document.getElementById('bt20').onclick = function() { alert(ques[z2][z0]); this.style.background = "#fff"};
+  document.getElementById('bt21').onclick = function() { alert(ques[z2][z1]); this.style.background = "#fff"};
+  document.getElementById('bt22').onclick = function() { alert(ques[z2][z2]); this.style.background = "#fff"};
+  document.getElementById('bt23').onclick = function() { alert(ques[z2][z3]); this.style.background = "#fff"};
+  document.getElementById('bt24').onclick = function() { alert(ques[z2][z4]); this.style.background = "#fff"};
+  document.getElementById('bt25').onclick = function() { alert(ques[z2][z5]); this.style.background = "#fff"};
+  document.getElementById('bt30').onclick = function() { alert(ques[z3][z0]); this.style.background = "#fff"};
+  document.getElementById('bt31').onclick = function() { alert(ques[z3][z1]); this.style.background = "#fff"};
+  document.getElementById('bt32').onclick = function() { alert(ques[z3][z2]); this.style.background = "#fff"};
+  document.getElementById('bt33').onclick = function() { alert(ques[z3][z3]); this.style.background = "#fff"};
+  document.getElementById('bt34').onclick = function() { alert(ques[z3][z4]); this.style.background = "#fff"};
+  document.getElementById('bt35').onclick = function() { alert(ques[z3][z5]); this.style.background = "#fff"};
+  document.getElementById('bt40').onclick = function() { alert(ques[z4][z0]); this.style.background = "#fff"};
+  document.getElementById('bt41').onclick = function() { alert(ques[z4][z1]); this.style.background = "#fff"};
+  document.getElementById('bt42').onclick = function() { alert(ques[z4][z2]); this.style.background = "#fff"};
+  document.getElementById('bt43').onclick = function() { alert(ques[z4][z3]); this.style.background = "#fff"};
+  document.getElementById('bt44').onclick = function() { alert(ques[z4][z4]); this.style.background = "#fff"};
+  document.getElementById('bt45').onclick = function() { alert(ques[z4][z5]); this.style.background = "#fff"};
+  document.getElementById('bt50').onclick = function() { alert(ques[z5][z0]); this.style.background = "#fff"};
+  document.getElementById('bt51').onclick = function() { alert(ques[z5][z1]); this.style.background = "#fff"};
+  document.getElementById('bt52').onclick = function() { alert(ques[z5][z2]); this.style.background = "#fff"};
+  document.getElementById('bt53').onclick = function() { alert(ques[z5][z3]); this.style.background = "#fff"};
+  document.getElementById('bt54').onclick = function() { alert(ques[z5][z4]); this.style.background = "#fff"};
+  document.getElementById('bt55').onclick = function() { alert(ques[z5][z5]); this.style.background = "#fff"};
 </script>
 </body>
 </html>
