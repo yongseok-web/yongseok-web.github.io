@@ -46,19 +46,23 @@ height:600px;margin: 8vh auto;background-color: #111;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);}
 h3{font-size: 15px;font-weight: bold;}
 .inner h2{margin-top: 5%;font-weight: bold;text-align: center;font-size: 30pt;padding-bottom: 2%;color: #fff;font-family: 'Yeon Sung'}
+.border_box{z-index: 150;border: 3px solid #000; position: absolute;width: 950px;height: 560px;top: 50%;right:50%;transform: translate(-50%,-56%);padding-top: 2%;padding-bottom: 4%;}
 
-
-nav {z-index: 5;width: 100%;height: 62px;position: fixed;top: 0;left: 0;background-color: #fff;border-bottom:1px solid #ccc;}
+nav {z-index: 205;width: 100%;height: 62px;position: fixed;top: 0;left: 0;background-color: #fff;border-bottom:1px solid #ccc;}
 nav a{z-index: 500; font-size: 1rem;}
 nav ul {text-align: center;width: 100%;list-style: none;display: inline-block;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
 nav ul li {width: 100px;display: inline-block;text-align: center;}
 nav ul h2 {font-size: 0;}
 /* nav end*/
 
-main li{display: inline-block;}
-/* project end*/
+#main{position: relative;}
+#main li{display: inline-block;}
+#main .inner_box{background-color: #fafafa}
+#main h2{color: #111;}
+#main a{color: #0a0a0a;}
+/* about end*/
 
-#project .inner {}
+#project{position: relative;}
 #project h2 {}
 .none{display: none;}
 #pro_con h3{;font-size: 20px;}
@@ -71,17 +75,21 @@ main li{display: inline-block;}
 #pro_con figcaption{font-size: 16px;color: #ccc;}
 /* project end*/
 
+#study{position: relative;}
+#study .inner_box{background-color: #fafafa}
+#study h2{color: #111;}
+#study a{color: #0a0a0a;}
 #study ul{width: 900px;margin: 0 auto;}
 #study ul li{display: inline-block;width: 33%;text-align: center;margin-bottom: 30px;}
 #study ul li b{font-size: 16px;}
 #study ul li img{width: 100%;}
 #study ul li figure{position: relative;}
-#study .study_hover{position: absolute;left: 0;opacity: 0;width: 100%;height: 97px;display: inline-block;padding: 35px 0;}
+#study .study_hover{color: #fff;position: absolute;left: 0;opacity: 0;width: 100%;height: 97px;display: inline-block;padding: 35px 0;}
 #study .study_hover:hover{opacity: .8;  font-size: 20px;background-color: #000;}
 
 /* study end*/
 
-section #contact{height: 100vh;}
+#contact{position: relative;}
 #contact .container{text-align: center; padding: 0;margin-top: 2%;}
 #contact a img{border-radius: 10px;padding: 2px 5px;}
 /* contact end */
@@ -96,6 +104,7 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
   </style>
 
 <body>
+  <div id="wrap">
     <span id="header_i">.</span>
     <div class='box'>
     <div class='wave -one'></div>
@@ -104,7 +113,6 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
     <img src="image/logo.png" alt="로고">
       </div>
 
-    <div id="wrap">
       <nav>
         <ul><h2>목차</h2>
           <li class="bt"><a href="#header_i">HOME</a>
@@ -118,16 +126,13 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
 
 <header id="header">
   <div class="inner_header inner inner_box">
-      <ul>
-        <li>
-        </li>
-      </ul>
   </div>
   <span id="main_i">.</span>
 </header>
 <!-- HOME -->
 
-<main id='main'>
+<article id='main'>
+  <div class="border_box" style="border: 3px solid #000;transform: translate(50%,-56%);"></div>
   <div class="inner_main inner inner_box">
     <h2><span>ABOUT</span></h2>
     <div class="inner_sec">
@@ -157,13 +162,14 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
 
   </div>
   <span id="project_i">.</span>
-</main>
+</article>
 <!-- ABOUT -->
 
 
     <article id="project">
+      <div class="border_box" style="border: 3px solid #fff;transform: translate(50%,-50%);"></div>
       <div class="inner_project inner inner_box">
-        <h2><span>PROJECTS</span></h2>
+        <h2><span>PROJECTS</span></h2>0
 
         <div id="pro"></div>
         <div id="project_menu">
@@ -325,14 +331,13 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
             </figure>
           </li>
         </ul>
+      </div>
     </article>
     <span id="study_i">.</span>
-  </div>
 <!-- PROJECT -->
 
-<article id="study">
+<article id="study"><div class="border_box" style="border: 3px solid #000;transform: translate(+50%,-56%);"></div>
   <div class="inner_study inner inner_box">
-
     <h2><span>STUDY</span></h2>
     <ul>
           <li><a href="./web_study/youtube/RWD/index.html" target="_blank"><b>반응형 레이아웃 연습</b><figure><img src="./web_study/youtube/RWD/home.png" alt=""><span class="study_hover">반응형 레이아웃 구성을 위한 기초학습으로 스터디원을 대상으로 소개하고 설명</span><figcaption>2019.04.11. 작성</figcaption></figure></a></li>
@@ -346,6 +351,7 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
 </article>
 <!-- STUDY -->
 <article id="contact">
+  <div class="border_box" style="border: 3px solid #fff;transform: translate(+50%,-50%);"></div>
   <div class="inner_contact inner inner_box">
     <h2><span>CONTACT</span></h2>
     <div class="container">
@@ -354,8 +360,8 @@ footer .inner_footer{width: 440px;overflow: hidden;position: relative;padding: 0
       <p><a aria-label="View yongseok on GitHub" href="http://github.com/yongseok-web" target="_blank"><img src="image/github.png" alt="GitHub"></a>
       <a aria-label="View yongseok on KAKAO" href="https://open.kakao.com/o/sYksMHnb" target="_blank"><img src="image/kakao.png" alt="카카오톡"></a></p>
     </div>
+  </div>
 </article>
-</div>
 <!-- CONTACT -->
 
 <footer>

@@ -5,7 +5,7 @@
   box-shadow: 0 2px 30px rgba(black, .2);
   background: lighten(#f0f4c3, 10%);
   position: absolute;
-  z-index: 999;
+  z-index: 100;
   margin-top: 12vh;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
