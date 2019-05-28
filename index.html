@@ -31,6 +31,7 @@
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/back_style.css">
+  <link rel="stylesheet" href="css/pro_style.css">
   <style media="screen">
 body{background: url(image/bg.png)}
 * {font-family: 'Noto Sans KR', sans-serif;margin: 0;padding: 0;}
@@ -55,13 +56,16 @@ nav ul h2 {font-size: 0;}
 main li{display: inline-block;}
 /* project end*/
 
+#project .inner {background-color: #000;}
+#project h2 {color: #fff;}
+#pro1{display: none;}
 #pro2{display: none;}
 #pro3{display: none;}
 #pro4{display: none;}
 /* project end*/
 
-#stu2{display: none;}
-#stu3{display: none;}
+#study ul{width: 900px;margin: 0 auto;}
+#study ul li{display: inline-block;width: 33%;text-align: center;margin-top: 30px;}
 /* study end*/
 
 section #contact{height: 100vh;}
@@ -123,7 +127,8 @@ footer{border-top: 1px solid #ccc;background-color: #eeeeee;}
       </ul>
       <ul>
         <h3>EDUCATION</h3>
-        <li>2019 경기산업기술교육센터 웹콘텐츠디자인 과정 수료(예정)</li>
+        <li>2018 한국발명진흥회 IP기술사업화 전문인력 양성과정 수료(150시간)</li>
+        <li>2019 경기산업기술교육센터 웹콘텐츠디자인 과정 중</li>
       </ul>
 
     </div>
@@ -146,7 +151,29 @@ footer{border-top: 1px solid #ccc;background-color: #eeeeee;}
     <article id="project">
       <div class="inner_project inner inner_box">
         <h2><span>PROJECTS</span></h2>
+
         <div id="pro"></div>
+        <div id="project_menu">
+              <div class='cursor2' id="cursor2"></div>
+              <div class='cursor3' id="cursor3"></div>
+          <div class="section">
+            <ul class="case-study-wrapper">
+              <li class="case-study-name">
+                <a href="http://www.one-real.com" target="_blank" class="hover-target">one-real.com</a>
+              </li>
+              <li class="case-study-name">
+                <a href="http://www.tahitiarts.com" target="_blank" class="hover-target">tahitiarts.com</a>
+              </li>
+              <li class="case-study-name">
+                <a href="" target="" class="hover-target">생산관리 프로그램</a>
+              </li>
+              <li class="case-study-name">
+                <a href="http://yongseok.dothome.co.kr/porject/kakao_copy" target="_blank" class="hover-target">copypage</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <ul>
           <li id="pro1">
             <h3>
@@ -209,29 +236,11 @@ footer{border-top: 1px solid #ccc;background-color: #eeeeee;}
 
     <h2><span>STUDY</span></h2>
     <ul>
-      <li id="stu1">
-        <ul>
-          <h3>HTML + CSS</h3>
-          <li>교재<figure><img src="" alt=""><figcaption></figcaption></figure></li>
-          <li>실습<figure><img src="" alt=""><figcaption></figcaption></figure></li>
           <li><a href="./web_study/youtube/RWD/index.html" target="_blank">반응형 레이아웃 연습<figure><img src="./web_study/youtube/RWD/home.png" alt=""><figcaption>2019.04.11. 작성</figcaption></figure></a></li>
-        </ul>
-      </li>
-      <li id="stu2">
-        <ul>
-          <h3>js, jquery</h3>
-          <li>교재<figure><img src="" alt=""><figcaption></figcaption></figure></li>
-          <li>실습<figure><img src="" alt=""><figcaption></figcaption></figure></li>
           <li><a href="./web_study/javascript/game/index.html" target="_blank">카드뒤집기 게임제작<figure><img src="./web_study/javascript/game/home.png" alt=""><figcaption>2019.03.27. 제작</figcaption></figure></a></li>
-        </ul>
-      </li>
-      <li id="stu3">
-        <ul>
-          <li><h3>PHP 프로그래밍</h3><a href="./Presentation/PHP/PHP_programming/index.html" target="_blank">PHP 프로그래밍 기초<figure><img src="./Presentation/PHP/PHP_programming/1.PNG" alt=""><figcaption>2019.04.02. 작성</figcaption></figure></a></li>
+          <li><a href="./Presentation/PHP/PHP_programming/index.html" target="_blank">PHP 프로그래밍 기초<figure><img src="./Presentation/PHP/PHP_programming/1.PNG" alt=""><figcaption>2019.04.02. 작성</figcaption></figure></a></li>
           <li><a href="./Presentation/PHP/PHP_mysql/index.html" target="_blank">MySQL 데이터베이스<figure><img src="./Presentation/PHP/PHP_mysql/1.PNG" alt=""><figcaption>2019.04.13. 작성</figcaption></figure></a></li>
-          <li><h3>기타</h3><a href="./Presentation/GitHub/index.html" target="_blank">GitHub 이해하기<figure><img src="./Presentation/GitHub/1.PNG" alt=""><figcaption>2019.03.28. 작성</figcaption></figure></a></li>
-        </ul>
-      </li>
+          <li><a href="./Presentation/GitHub/index.html" target="_blank">GitHub 이해하기<figure><img src="./Presentation/GitHub/1.PNG" alt=""><figcaption>2019.03.28. 작성</figcaption></figure></a></li>
     </ul>
   </div>
   <span id="contact_i">.</span>
@@ -297,6 +306,52 @@ window.onscroll = function() {scrollFunction_nav();scrollFunction();};
      });
 
      });
+
+     (function($) { "use strict";
+         document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+             t.style.left = n.clientX + "px",
+     		t.style.top = n.clientY + "px",
+     		e.style.left = n.clientX + "px",
+     		e.style.top = n.clientY + "px",
+     		i.style.left = n.clientX + "px",
+     		i.style.top = n.clientY + "px"
+         });
+         var e = document.getElementById("cursor2"),
+             i = document.getElementById("cursor3");
+         function n(t) {
+             e.classList.add("hover"), i.classList.add("hover")
+         }
+         function s(t) {
+             e.classList.remove("hover"), i.classList.remove("hover")
+         }
+         s();
+         for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+             o(r[a])
+         }
+         function o(t) {
+             t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+         }
+
+     	$(document).ready(function() {
+     		$('.case-study-name:nth-child(1)').on('mouseenter', function() {
+     			$('.case-study-name.active').removeClass('active');
+     			$('.case-study-name:nth-child(1)').addClass('active');
+     		})
+     		$('.case-study-name:nth-child(2)').on('mouseenter', function() {
+     			$('.case-study-name.active').removeClass('active');
+     			$('.case-study-name:nth-child(2)').addClass('active');
+     		})
+     		$('.case-study-name:nth-child(3)').on('mouseenter', function() {
+     			$('.case-study-name.active').removeClass('active');
+     			$('.case-study-name:nth-child(3)').addClass('active');
+     		})
+     		$('.case-study-name:nth-child(4)').on('mouseenter', function() {
+     			$('.case-study-name.active').removeClass('active');
+     			$('.case-study-name:nth-child(4)').addClass('active');
+     		})
+     		$('.case-study-name:nth-child(1)').trigger('mouseenter')
+        });
+       })(jQuery);
 </script>
 </body>
 
