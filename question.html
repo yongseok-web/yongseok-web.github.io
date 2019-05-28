@@ -8,7 +8,7 @@
   <style media="screen">
     *{margin: 0;padding: 0;font-size: 0;}
     .mo{background: #eea1f0;width: 45px;height: 45px;display: inline-block;margin: 0;}
-    #center{width: 270px;position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%)}
+    #center{width: 270px;height: 270px;position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);background-size: cover;}
   </style>
 </head>
 <body>
@@ -119,43 +119,45 @@
       ,'나의 삶은 ___이다'
       ,'당신에게 힘을 주는 말은?']
   ];
+  var back = ["https://monthly.chosun.com/upload/1008/1008_366.jpg","https://file.mk.co.kr/meet/neds/2017/09/image_readtop_2017_599888_15047247033018724.jpg","https://file.mk.co.kr/meet/neds/2018/02/image_readtop_2018_78946_15176052643194106.jpg","https://pds.joins.com/news/component/htmlphoto_mmdata/201506/10/htm_20150610113941975.jpg","http://image.chosun.com/sitedata/image/201607/06/2016070600182_0.jpg","https://t1.daumcdn.net/cfile/tistory/99D7C03D5A756BBA08"];
+  document.getElementById('center').style.backgroundImage = "url("+back[z0]+")";
 
-  document.getElementById('bt00').onclick = function() { alert(ques[z0][z0]); this.style.background = "#fff"};
-  document.getElementById('bt01').onclick = function() { alert(ques[z0][z1]); this.style.background = "#fff"};
-  document.getElementById('bt02').onclick = function() { alert(ques[z0][z2]); this.style.background = "#fff"};
-  document.getElementById('bt03').onclick = function() { alert(ques[z0][z3]); this.style.background = "#fff"};
-  document.getElementById('bt04').onclick = function() { alert(ques[z0][z4]); this.style.background = "#fff"};
-  document.getElementById('bt05').onclick = function() { alert(ques[z0][z5]); this.style.background = "#fff"};
-  document.getElementById('bt10').onclick = function() { alert(ques[z1][z0]); this.style.background = "#fff"};
-  document.getElementById('bt11').onclick = function() { alert(ques[z1][z1]); this.style.background = "#fff"};
-  document.getElementById('bt12').onclick = function() { alert(ques[z1][z2]); this.style.background = "#fff"};
-  document.getElementById('bt13').onclick = function() { alert(ques[z1][z3]); this.style.background = "#fff"};
-  document.getElementById('bt14').onclick = function() { alert(ques[z1][z4]); this.style.background = "#fff"};
-  document.getElementById('bt15').onclick = function() { alert(ques[z1][z5]); this.style.background = "#fff"};
-  document.getElementById('bt20').onclick = function() { alert(ques[z2][z0]); this.style.background = "#fff"};
-  document.getElementById('bt21').onclick = function() { alert(ques[z2][z1]); this.style.background = "#fff"};
-  document.getElementById('bt22').onclick = function() { alert(ques[z2][z2]); this.style.background = "#fff"};
-  document.getElementById('bt23').onclick = function() { alert(ques[z2][z3]); this.style.background = "#fff"};
-  document.getElementById('bt24').onclick = function() { alert(ques[z2][z4]); this.style.background = "#fff"};
-  document.getElementById('bt25').onclick = function() { alert(ques[z2][z5]); this.style.background = "#fff"};
-  document.getElementById('bt30').onclick = function() { alert(ques[z3][z0]); this.style.background = "#fff"};
-  document.getElementById('bt31').onclick = function() { alert(ques[z3][z1]); this.style.background = "#fff"};
-  document.getElementById('bt32').onclick = function() { alert(ques[z3][z2]); this.style.background = "#fff"};
-  document.getElementById('bt33').onclick = function() { alert(ques[z3][z3]); this.style.background = "#fff"};
-  document.getElementById('bt34').onclick = function() { alert(ques[z3][z4]); this.style.background = "#fff"};
-  document.getElementById('bt35').onclick = function() { alert(ques[z3][z5]); this.style.background = "#fff"};
-  document.getElementById('bt40').onclick = function() { alert(ques[z4][z0]); this.style.background = "#fff"};
-  document.getElementById('bt41').onclick = function() { alert(ques[z4][z1]); this.style.background = "#fff"};
-  document.getElementById('bt42').onclick = function() { alert(ques[z4][z2]); this.style.background = "#fff"};
-  document.getElementById('bt43').onclick = function() { alert(ques[z4][z3]); this.style.background = "#fff"};
-  document.getElementById('bt44').onclick = function() { alert(ques[z4][z4]); this.style.background = "#fff"};
-  document.getElementById('bt45').onclick = function() { alert(ques[z4][z5]); this.style.background = "#fff"};
-  document.getElementById('bt50').onclick = function() { alert(ques[z5][z0]); this.style.background = "#fff"};
-  document.getElementById('bt51').onclick = function() { alert(ques[z5][z1]); this.style.background = "#fff"};
-  document.getElementById('bt52').onclick = function() { alert(ques[z5][z2]); this.style.background = "#fff"};
-  document.getElementById('bt53').onclick = function() { alert(ques[z5][z3]); this.style.background = "#fff"};
-  document.getElementById('bt54').onclick = function() { alert(ques[z5][z4]); this.style.background = "#fff"};
-  document.getElementById('bt55').onclick = function() { alert(ques[z5][z5]); this.style.background = "#fff"};
+  document.getElementById('bt00').onclick = function() { alert(ques[z0][z0]); this.style.background = "none"};
+  document.getElementById('bt01').onclick = function() { alert(ques[z0][z1]); this.style.background = "none"};
+  document.getElementById('bt02').onclick = function() { alert(ques[z0][z2]); this.style.background = "none"};
+  document.getElementById('bt03').onclick = function() { alert(ques[z0][z3]); this.style.background = "none"};
+  document.getElementById('bt04').onclick = function() { alert(ques[z0][z4]); this.style.background = "none"};
+  document.getElementById('bt05').onclick = function() { alert(ques[z0][z5]); this.style.background = "none"};
+  document.getElementById('bt10').onclick = function() { alert(ques[z1][z0]); this.style.background = "none"};
+  document.getElementById('bt11').onclick = function() { alert(ques[z1][z1]); this.style.background = "none"};
+  document.getElementById('bt12').onclick = function() { alert(ques[z1][z2]); this.style.background = "none"};
+  document.getElementById('bt13').onclick = function() { alert(ques[z1][z3]); this.style.background = "none"};
+  document.getElementById('bt14').onclick = function() { alert(ques[z1][z4]); this.style.background = "none"};
+  document.getElementById('bt15').onclick = function() { alert(ques[z1][z5]); this.style.background = "none"};
+  document.getElementById('bt20').onclick = function() { alert(ques[z2][z0]); this.style.background = "none"};
+  document.getElementById('bt21').onclick = function() { alert(ques[z2][z1]); this.style.background = "none"};
+  document.getElementById('bt22').onclick = function() { alert(ques[z2][z2]); this.style.background = "none"};
+  document.getElementById('bt23').onclick = function() { alert(ques[z2][z3]); this.style.background = "none"};
+  document.getElementById('bt24').onclick = function() { alert(ques[z2][z4]); this.style.background = "none"};
+  document.getElementById('bt25').onclick = function() { alert(ques[z2][z5]); this.style.background = "none"};
+  document.getElementById('bt30').onclick = function() { alert(ques[z3][z0]); this.style.background = "none"};
+  document.getElementById('bt31').onclick = function() { alert(ques[z3][z1]); this.style.background = "none"};
+  document.getElementById('bt32').onclick = function() { alert(ques[z3][z2]); this.style.background = "none"};
+  document.getElementById('bt33').onclick = function() { alert(ques[z3][z3]); this.style.background = "none"};
+  document.getElementById('bt34').onclick = function() { alert(ques[z3][z4]); this.style.background = "none"};
+  document.getElementById('bt35').onclick = function() { alert(ques[z3][z5]); this.style.background = "none"};
+  document.getElementById('bt40').onclick = function() { alert(ques[z4][z0]); this.style.background = "none"};
+  document.getElementById('bt41').onclick = function() { alert(ques[z4][z1]); this.style.background = "none"};
+  document.getElementById('bt42').onclick = function() { alert(ques[z4][z2]); this.style.background = "none"};
+  document.getElementById('bt43').onclick = function() { alert(ques[z4][z3]); this.style.background = "none"};
+  document.getElementById('bt44').onclick = function() { alert(ques[z4][z4]); this.style.background = "none"};
+  document.getElementById('bt45').onclick = function() { alert(ques[z4][z5]); this.style.background = "none"};
+  document.getElementById('bt50').onclick = function() { alert(ques[z5][z0]); this.style.background = "none"};
+  document.getElementById('bt51').onclick = function() { alert(ques[z5][z1]); this.style.background = "none"};
+  document.getElementById('bt52').onclick = function() { alert(ques[z5][z2]); this.style.background = "none"};
+  document.getElementById('bt53').onclick = function() { alert(ques[z5][z3]); this.style.background = "none"};
+  document.getElementById('bt54').onclick = function() { alert(ques[z5][z4]); this.style.background = "none"};
+  document.getElementById('bt55').onclick = function() { alert(ques[z5][z5]); this.style.background = "none"};
 </script>
 </body>
 </html>
