@@ -1,0 +1,78 @@
+* {font-family: 'Noto Sans KR', sans-serif;margin: 0;padding: 0;}
+body{background: url(https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-1853305_960_720.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+#wrap{background-color: rgba(211, 245, 251, 0.36);width: 100%;font-family: 'Noto Sans KR'}
+.inner{width: 990px;margin: 0 auto;padding-top: 2%;padding-bottom: 4%;position: relative;height:600px;margin: 8vh auto;}
+.inner a{color:#efefef}
+.inner_box{
+background-color: #111;
+-webkit-box-shadow: 3px 9px 20px 0 rgba(0,0,0,0.3), 3px 9px 9px 0 rgba(0,0,0,0.3);
+-moz-box-shadow: 3px 9px 20px 0 rgba(0,0,0,0.3), 3x 9px 9px 0 rgba(0,0,0,0.3);
+box-shadow: 3px 9px 20px 0 rgba(0,0,0,0.3), 3px 9px 9px 0 rgba(0,0,0,0.3);}
+h3{font-size: 15px;font-weight: bold;}
+.inner h2{margin-top: 5%;font-weight: bold;text-align: center;font-size: 30pt;padding-bottom: 2%;color: #fff;font-family: 'Yeon Sung'}
+
+nav {display: none;z-index: 205;width: 100%;height: 62px;position: fixed;top: 0;left: 0;background-color: #fff;border-bottom:1px solid #ccc;}
+nav a{z-index: 500; font-size: 1rem;}
+nav ul {text-align: center;width: 100%;list-style: none;display: inline-block;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
+nav ul li {width: 100px;display: inline-block;text-align: center;}
+nav ul h2 {font-size: 0;}
+/* nav end*/
+
+#main{position: relative;}
+#main li{display: inline-block;margin-left: 15px;}
+#main .inner_box{background-color: #fafafa}
+#main h2{color: #111;}
+#main h3{color: #111; margin-bottom: 3px;font-size: 1.4em}
+#main a{color: #0a0a0a;}
+#main .inner_sec{margin-left: 50px;}
+#main ul {margin-bottom: 30px;font-size: 1.2em;}
+#main .skills li strong {width: 130px;height: 30px;display: block;margin: 8px 0 0 0px;background-color: #ccc;border-radius: 20px;position: relative;}
+#main .skills li em {    height: 30px;display: block;margin: 8px 0 0 0px;background-color: #000;border-radius: 20px;text-align: center;line-height: 30px;letter-spacing: 2px;color: #fff;}
+#main .skills li:nth-child(2) em {width: 117px;}
+#main .skills li:nth-child(3) em {width: 110px;}
+#main .skills li:nth-child(4) em {width: 110px;}
+#main .skills li:nth-child(5) em {width: 104px;}
+#main .skills li:nth-child(6) em {width: 97px;}
+#main .skills li:nth-child(7) em {width: 104px;}
+/* about end*/
+
+#project{position: relative;}
+.none{display: none;}
+#pro_con h3{;font-size: 20px;}
+#pro_con{position: absolute;left: 290px;top: 160px;color: #fdfdfd;font-size: 16px;}
+#pro_con>li{column-count: 2;width: 95%;}
+#pro_con figure img{width: 280px;height: 310px;margin-left: 8px;margin-bottom: 0px;}
+#pro_con figure li{margin-left: 12px;line-height: 1.8;color: rgba(255, 255, 255, 0.87);}
+#pro_con figure ul{margin-top:10px;color: #ffffff;}
+#pro_con a{color: #c76001}
+#pro_con figcaption{font-size: 16px;color: #ccc;}
+/* project end*/
+
+#study{position: relative;}
+#study .inner_box{background-color: #fafafa}
+#study h2{color: #111;}
+#study a{color: #0a0a0a;}
+#study ul{width: 900px;margin: 0 auto;}
+#study ul li{display: inline-block;width: 33%;text-align: center;margin-bottom: 30px;}
+#study ul li b{font-size: 16px;}
+#study ul li img{width: 100%;}
+#study ul li figure{position: relative;}
+#study .study_hover{color: #fff;position: absolute;left: 0;opacity: 0;width: 100%;height: 97px;display: inline-block;padding: 35px 0;}
+#study .study_hover:hover{opacity: .8;  font-size: 20px;background-color: #000;}
+
+/* study end*/
+
+#contact{position: relative;}
+#contact .container{text-align: center; padding: 0;margin-top: 2%;}
+#contact a img{border-radius: 10px;padding: 2px 5px;}
+/* contact end */
+
+footer{}
+/* footer end */
+
+#bt_top{cursor: pointer;border-radius: 15px;width: 40px;height: 40px;background-repeat: no-repeat;position: fixed;top: 90vh;right: 25px;display: none;background-color: #fff;}
+#bt_top h3{position: relative;top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center;}
+@media screen and (max-width:1002px){
+#wrap{width: 1002px;}
+#bt_top{right: -100px}
+}

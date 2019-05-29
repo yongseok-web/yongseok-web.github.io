@@ -6,7 +6,6 @@
   background: lighten(#f0f4c3, 10%);
   position: absolute;
   z-index: 100;
-  margin-top: 12vh;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
 }
