@@ -26,7 +26,7 @@
 
   <title>YONGSEOK PORTFOLIO</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Yeon+Sung|Do+Hyeon" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Yeon+Sung|Do+Hyeon|Righteous" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="css/reset.css">
@@ -57,7 +57,8 @@
       <div class='wave -one'></div>
       <div class='wave -two'></div>
       <div class='wave -three'></div>
-      <img src="image/logo.png" alt="로고">
+        <div class="the-goods">yong</div>
+        <div class="the-good">seok</div>
     </div>
   </div>
   <span id="main_i">.</span>
@@ -388,6 +389,24 @@ window.onscroll = function() {scrollFunction_nav();scrollFunction();};
      		$('.case-study-name:nth-child(1)').trigger('mouseenter')
         });
        })(jQuery);
+
+       ( function( $ ) {
+         $.fn.spanLetters = function() {
+             this.each( function() {
+                 var words, i, text;
+                 words = $( this ).text().split( '' );
+                 for ( i = 0; i in words; i++ ) {
+                     words[i] = '<span class="sl' + ( i + 1 ) + ' span-letter">' + words[i] + '</span>'
+                 };
+                 text = words.join( '' );
+                 $( this ).html( text );
+             })
+         }
+       }( jQuery ));
+
+       $( ".the-good" ).spanLetters();
+       $( ".the-goods" ).spanLetters();
+
 </script>
 </body>
 

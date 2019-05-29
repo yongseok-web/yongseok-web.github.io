@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Document</title><style media="screen">
+  @import url(https://fonts.googleapis.com/css?family=Righteous);
+
+  .the-goods {
+    font-size: 120px;
+    text-align: center;
+    margin: 30px auto 0px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: Righteous;
+    color: white;
+    max-width: 1150px;
+  }
+
+  .the-goods span {
+    text-shadow: -1px 0 0px #FFADDA, 0 1px 0px #F99ACD, -2px 1px 0px #FFADDA, -1px 2px 0px #F99ACD, -3px 2px 0px #FFADDA, -2px 3px 0px #F99ACD, -4px 3px 0px #FFADDA, -3px 4px 0px #F99ACD, -5px 4px 0px #FFADDA, -4px 5px 0px #F99ACD, -6px 5px 0px #FFADDA, -5px 6px 15px #000000;
+    display: inline-block;
+    position: relative;
+    padding: 0px 6px;
+    transition: 0.8s;
+    transform: rotateX( 0deg ) rotateY( 0deg ) rotateZ( 0deg );
+  }
+
+  .the-goods:hover {
+    cursor: pointer;
+  }
+
+  .the-goods:hover span:nth-child(odd) {
+    transform: rotateX( 10deg ) rotateY( 10deg ) rotateZ( -370deg );
+  }
+
+  .the-goods:hover span:nth-child(even) {
+    transform: rotateX( 10deg ) rotateY( 10deg ) rotateZ( 370deg );
+  }
+  </style>
+</head>
+<body>
+  <div class="the-goods">yong</div>
+<div class="the-goods">seok</div>
+<script>
+( function( $ ) {
+
+  /**
+   * span-letters.js
+   *
+   * Example usage: jQuery('.selector').spanLetters();
+   */
+  $.fn.spanLetters = function() {
+
+      // Loop through each element on which this function has been called
+      this.each( function() {
+
+          // Scope the variables
+          var words, i, text;
+
+          // Make an array with each letter of the string as a value
+          words = $( this ).text().split( '' );
+
+          // Loop through the letters and wrap each one in a span
+          for ( i = 0; i in words; i++ ) {
+              words[i] = '<span class="sl' + ( i + 1 ) + ' span-letter">' + words[i] + '</span>'
+          };
+
+          // Join our array of span-wrapped letters back into a string
+          text = words.join( '' );
+
+          // Replace the original string with the new string
+          $( this ).html( text );
+      })
+  }
+}( jQuery ));
+
+$( ".the-goods" ).spanLetters();
+</script>
+</body>
+</html>

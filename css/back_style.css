@@ -40,19 +40,43 @@
   background: rgb(255, 255, 255);
 }
 
-.box:after {
-  content: '';
-  display: block;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
-  z-index: 11;
-  transform: translate3d(0, 0, 0);
-}
 
 @keyframes drift {
   from { transform: rotate(0deg); }
   from { transform: rotate(360deg); }
+}
+
+.the-good, .the-goods {
+  position: relative;
+  top:140px;
+  font-size: 110px;
+  text-align: center;
+  margin: 0px auto 0px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: Righteous;
+  color: rgba(0, 0, 0, 0.71);
+}
+
+.the-good span, .the-goods span {
+  font-family: Righteous;
+  text-shadow: -1px 0 0px #adc2ff, 0 1px 0px #9a9bf9, -2px 1px 0px #adc2ff, -1px 2px 0px #9a9bf9, -3px 2px 0px #adc2ff, -2px 3px 0px #9a9bf9,
+   -4px 3px 0px #adc2ff, -3px 4px 0px #9a9bf9, -5px 4px 0px #adc2ff, -4px 5px 0px #9a9bf9, -6px 5px 0px #adc2ff, -5px 6px 15px #000000;
+  display: inline-block;
+  position: relative;
+  padding: 0px 6px;
+  transition: 0.8s;
+  transform: rotateX( 0deg ) rotateY( 0deg ) rotateZ( 0deg );
+}
+
+.the-good:hover, .the-goods:hover {
+  cursor: pointer;
+}
+
+.the-good:hover span:nth-child(odd), .the-goods:hover span:nth-child(odd) {
+  transform: rotateX( 10deg ) rotateY( 10deg ) rotateZ( -370deg );
+}
+
+.the-good:hover span:nth-child(even), .the-goods:hover span:nth-child(even) {
+  transform: rotateX( 10deg ) rotateY( 10deg ) rotateZ( 370deg );
 }
