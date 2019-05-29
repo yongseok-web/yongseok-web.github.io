@@ -41,9 +41,9 @@ body{background: url(https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-18533
 .inner a{color:#efefef}
 .inner_box{
 background-color: #111;
--webkit-box-shadow: 3px 9px 20px 0 rgba(0,0,0,0.6), 3px 9px 9px 0 rgba(0,0,0,0.6);
--moz-box-shadow: 3px 9px 20px 0 rgba(0,0,0,0.6), 3x 9px 9px 0 rgba(0,0,0,0.6);
-box-shadow: 3px 9px 20px 0 rgba(0,0,0,0.6), 3px 9px 9px 0 rgba(0,0,0,0.6);}
+-webkit-box-shadow: 3px 9px 20px 0 rgba(0,0,0,0.3), 3px 9px 9px 0 rgba(0,0,0,0.3);
+-moz-box-shadow: 3px 9px 20px 0 rgba(0,0,0,0.3), 3x 9px 9px 0 rgba(0,0,0,0.3);
+box-shadow: 3px 9px 20px 0 rgba(0,0,0,0.3), 3px 9px 9px 0 rgba(0,0,0,0.3);}
 h3{font-size: 15px;font-weight: bold;}
 .inner h2{margin-top: 5%;font-weight: bold;text-align: center;font-size: 30pt;padding-bottom: 2%;color: #fff;font-family: 'Yeon Sung'}
 
@@ -55,10 +55,21 @@ nav ul h2 {font-size: 0;}
 /* nav end*/
 
 #main{position: relative;}
-#main li{display: inline-block;}
+#main li{display: inline-block;margin-left: 15px;}
 #main .inner_box{background-color: #fafafa}
 #main h2{color: #111;}
+#main h3{color: #111; margin-bottom: 3px;font-size: 1.4em}
 #main a{color: #0a0a0a;}
+#main .inner_sec{margin-left: 50px;}
+#main ul {margin-bottom: 30px;font-size: 1.2em;}
+#main .skills li strong {width: 130px;height: 30px;display: block;margin: 8px 0 0 0px;background-color: #ccc;border-radius: 20px;position: relative;}
+#main .skills li em {    height: 30px;display: block;margin: 8px 0 0 0px;background-color: #000;border-radius: 20px;text-align: center;line-height: 30px;letter-spacing: 2px;color: #fff;}
+#main .skills li:nth-child(2) em {width: 117px;}
+#main .skills li:nth-child(3) em {width: 110px;}
+#main .skills li:nth-child(4) em {width: 110px;}
+#main .skills li:nth-child(5) em {width: 104px;}
+#main .skills li:nth-child(6) em {width: 97px;}
+#main .skills li:nth-child(7) em {width: 104px;}
 /* about end*/
 
 #project{position: relative;}
@@ -134,28 +145,26 @@ footer{}
   <div class="inner_main inner inner_box" style="border: 6px solid rgba(0, 0, 0, 0.90);">
     <h2><span>ABOUT</span></h2>
     <div class="inner_sec">
-
-    </div>
-    <div class="inner_sec">
       <ul>
         <h3>NAME</h3>
         <li>최용석</li>
       </ul>
       <ul>
         <h3>EDUCATION</h3>
-        <li>2018 한국발명진흥회 IP기술사업화 전문인력 양성과정 수료(150시간)</li>
-        <li>2019 경기산업기술교육센터 웹콘텐츠디자인 과정 중</li>
+        <li>2018 한국발명진흥회 IP기술사업화 전문인력 양성과정 수료(150시간)</li><br>
+        <li>2019 경기산업기술교육센터 웹콘텐츠디자인 과정(2019.02.25~)</li>
       </ul>
-    </div>
-    <ul>
+    <ul class="skills">
       <h3>SKILLS</h3>
-      <li><a href="web_study/html5.list.html"><img src="web_study/html.png" alt="HTML5"></a></li>
-      <li><a href="web_study/css3/list.html"><img src="web_study/css.png" alt="CSS3"></a></li>
-      <li><a href="web_study/js/list.html"><img src="web_study/js.png" alt="JavaScript"></a></li>
-      <li><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/php.png" alt="PHP"></a></li>
-      <li><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/mysql.png" alt="PHP"></a></li>
-      <li><a href="design_study/Adobe Photoshop.html"><img src="design_study/ps.png" alt="Adobe Photoshop"></a></li>
-    </ul>정보기술자격(ITQ) A등급(아래한글 한글엑셀 한글파워포인트), 컴퓨터활용능력 2급, 워드프로세서
+      <li><span><a href="web_study/html5.list.html"><img src="web_study/html.png" alt="HTML5"></a></span><br><strong><em>90%</em></strong></li>
+      <li><span><a href="web_study/css3/list.html"><img src="web_study/css.png" alt="CSS3"></a></span><br><strong><em>85%</em></strong></li>
+      <li><span><a href="web_study/js/list.html"><img src="web_study/js.png" alt="JavaScript"></a></span><br><strong><em>85%</em></strong></li>
+      <li><span><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/php.png" alt="PHP"></a></span><br><strong><em>80%</em></strong></li>
+      <li><span><a href="web_study/PHP/hanbit7th/list.html"><img src="web_study/mysql.png" alt="MySQL"></a></span><br><strong><em>70%</em></strong></li>
+      <li><span><a href="design_study/Adobe Photoshop.html"><img src="design_study/ps.png" alt="Adobe Photoshop"></a></span><br><strong><em>80%</em></strong></li>
+<br>정보기술자격(ITQ) A등급(아래한글 한글엑셀 한글파워포인트), 컴퓨터활용능력 2급, 워드프로세서
+    </ul>
+  </div>
 
   </div>
   <span id="project_i">.</span>
@@ -231,7 +240,7 @@ footer{}
               <figcaption>
                 Team Project | 2019.04.25~05.26
               </figcaption>
-              <a href="http://www.tahitiarts.com" target="_blank"><img src="image/pro1.png" alt=""></a>
+              <a href="http://www.tahitiarts.com" target="_blank"><img src="image/pro2.png" alt=""></a>
               <ul>
                 <li>언어 : HTML CSS JS php</li>
                 <li>참여 : 주요 기능 구현 및 DB 관리자 페이지 제작</li>
@@ -259,73 +268,68 @@ footer{}
             </figure>
           </li>
           <li id="pro3" class="pro_co none">
-            <h3>원공인중개사사무소 홈페이지 제작</h3>
+            <br>
+            <h3>중소기업 생산관리 프로그램</h3>
             <figure>
               <figcaption>
-                Team Project | 2019.04.05~05.09
+                개인 Project | 2019.05.18~05.24
               </figcaption>
-              <img src="image/pro1.png" alt="">
+              <br>
+              <img src="image/pro3.png" alt="">
+              <br>
               <ul>
-                <li>언어 : HTML CSS JS php</li>
-                <li>참여 : 프로젝트 일정 조정, 주요 기능 구현 및 DB 관리자 페이지 제작</li>
-              </ul>
-              <ul><b>제작 단계</b>
-                <li>클라이언트 미팅 → 제안서 제출 → 디자인 시안 제작 → 클라이언트 컨펌 → 주요 기능 구성 → 세부 디자인 조정 → 클라이언트 최종 미팅
-                <li>
+                <li>　</li>
+                <li>　</li>
+                <li>　</li>
               </ul>
             </figure>
             <figure>
-              <ul>
-                <b>주요기능</b>
-                <li>화면 크기에 따른 반응형 구조</li>
-                <li>동영상 메인 및 유도기능</li>
-                <li>이미지 앨범 (jQuery 플러그인 가공)</li>
-                <li>블로그 rss 리더(SimplePie)</li>
-                <li>단지별 동에 따른 형태 소개</li>
-                <li>주요 링크 및 문의 버튼</li>
+              <ul><b>제작 정보</b>
+                <li>웹 프로그램 서비스로 PC와 모바일에 대응하며, php와 MySQL을 활용 제품의 입고-출고-재고를 관리하는 프로그램을 제작</li>
+                <li>언어 : HTML CSS JS php</li>
+                <li>중점 : 사용자 편리성 및 중복작업의 최소화</li>
               </ul>
               <ul>
-                <b>관리자 페이지</b>
-                <li> php와 MySQL을 사용하여, 클라이언트가 지정한 관리자에 의해 홈페이지 전반의 사진 및 내용을 수정할 수 있는 관리자 페이지 구현.</li>
-                <li><a href="http://www.one-real.com/management/manual.pdf">관리자 페이지 매뉴얼</a> </p>
-                </li>
+                <b>주요기능</b>
+                <li>제품 등록, 삭제</li>
+                <li>제품별 입고-출고-재고 관리</li>
+                <li>제고현황 조회</li>
+                <li>기간별 매출 현황</li>
+                <li>동시출고 상품 등록</li>
+                <li>생산공정 고려 계산 자동화</li>
               </ul>
             </figure>
           </li>
           <li id="pro4" class="pro_co none">
-            <h3>카피페이지 제작</h3>
+            <h3>카피페이지</h3>
             <figure>
               <figcaption>
-                개인 작업물 | 2019.04.05~05.09
+                카카오 홈페이지 | 2019.05.
               </figcaption>
-              <a href="http://www.tahitiarts.com" target="_blank"><img src="image/pro2.png" alt=""></a>
+              <a href="http://yongseok.dothome.co.kr/porject/kakao_copy/" target="_blank"><img src="image/pro4.png" alt=""></a>
               <ul>
-                <li>언어 : HTML CSS JS php</li>
-                <li>중점 : 프로젝트 일정 조정, 주요 기능 구현 및 DB 관리자 페이지 제작</li>
-              </ul>
-              <ul><b>제작 단계</b>
-                <li>클라이언트 미팅 → 제안서 제출 → 디자인 시안 제작 → 클라이언트 컨펌 → 주요 기능 구성 → 세부 디자인 조정 → 클라이언트 최종 미팅
-                <li>
+                <li>언어 : HTML CSS JS</li>
+                <li>중점 : 시멘틱 태그 웹표준 준수</li>
+                <li>　　　  및 jQuery 활용</li>
+                <li>　　　  　　　  　　　  　　　  　　　  　　　  </li>
               </ul>
             </figure>
+            <h3>코딩테스트</h3>
             <figure>
+              <figcaption>
+                코딩테스트(60분) | 2019.05.
+              </figcaption>
+              <a href="http://yongseok.dothome.co.kr/porject/coding/index.html" target="_blank"><img src="image/pro4_1.png" alt=""></a>
               <ul>
-                <b>주요기능</b>
-                <li>화면 크기에 따른 반응형 구조</li>
-                <li>동영상 메인 및 유도기능</li>
-                <li>이미지 앨범 (jQuery 플러그인 가공)</li>
-                <li>블로그 rss 리더(SimplePie)</li>
-                <li>단지별 동에 따른 형태 소개</li>
-                <li>주요 링크 및 문의 버튼</li>
-              </ul>
-              <ul>
-                <b>관리자 페이지</b>
-                <li> php와 MySQL을 사용하여, 클라이언트가 지정한 관리자에 의해 홈페이지 전반의 사진 및 내용을 수정할 수 있는 관리자 페이지 구현.</li>
-                <li><a href="http://yongseok.dothome.co.kr/porject/kakao_copy">관리자 페이지 매뉴얼</a> </p>
-                </li>
+                <li>언어 : HTML CSS JS</li>
+                <li>중점 : 기본 CSS 활용 레이아웃 구성</li>
+                <li>　　　  및 제작시간 준수</li>
               </ul>
             </figure>
           </li>
+
+
+
         </ul>
       </div>
     </article>
